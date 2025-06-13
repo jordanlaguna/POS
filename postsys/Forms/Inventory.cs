@@ -15,12 +15,15 @@ namespace postsys.Forms
     public partial class Inventory : Form
     {
         private bool barcodeCompleted = false;
+        private const string BaseURL = "http://localhost:8000/";
+        private const string ProductsEndpoint = $"{BaseURL}products";
+        private const string CategoriesEndpoint = $"{BaseURL}categories";
 
         public Inventory()
         {
             InitializeComponent();
             LoadDataInTableInventory();
-            LoadStaticCategories();
+            LoadDynamicCategories();
             textBarCode.TextChanged += textBarCode_TextChanged;
 
             // Button to add product
@@ -37,7 +40,7 @@ namespace postsys.Forms
             using var client = new HttpClient();
             try
             {
-                var response = await client.GetAsync("http://localhost:8000/products/products_list");
+                var response = await client.GetAsync($"{ProductsEndpoint}/products_list");
                 response.EnsureSuccessStatusCode();
                 var responseBody = await response.Content.ReadAsStringAsync();
                 var productList = JsonSerializer.Deserialize<List<Product>>(responseBody, new JsonSerializerOptions
@@ -53,7 +56,7 @@ namespace postsys.Forms
             }
         }
 
-        public async void LoadDataInTableInventory()
+        public async Task LoadDataInTableInventory()
         {
             var products = await GetAllInformationProducts();
             tableInventory.DataSource = null;
@@ -84,13 +87,13 @@ namespace postsys.Forms
 
             try
             {
-                var response = await client.PostAsync("http://localhost:8000/products/add_product", content);
+                var response = await client.PostAsync($"{ProductsEndpoint}/add_product", content);
                 var responseBody = await response.Content.ReadAsStringAsync();
 
                 if (response.IsSuccessStatusCode)
                 {
                     MessageBox.Show("Producto agregado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadDataInTableInventory();
+                    await LoadDataInTableInventory();
                 }
                 else
                 {
@@ -127,7 +130,7 @@ namespace postsys.Forms
             if (!barcodeCompleted && textBarCode.Text.Length == 3)
             {
                 Random rnd = new Random();
-                string randomDigits = rnd.Next(100000, 999999).ToString(); 
+                string randomDigits = rnd.Next(100000, 999999).ToString();
                 textBarCode.Text += randomDigits;
                 textBarCode.SelectionStart = textBarCode.Text.Length;
                 barcodeCompleted = true;
@@ -138,21 +141,72 @@ namespace postsys.Forms
                 barcodeCompleted = false;
             }
         }
-        private void LoadStaticCategories()
+        private async Task<List<Category>> GetAllCategories()
         {
-            var categories = new List<Category>
+            using var client = new HttpClient();
+            try
             {
-            new Category { id = 1, name = "Bebidas" },
-            new Category { id = 2, name = "Snacks" },
-            new Category { id = 3, name = "Carnes" },
-            new Category { id = 4, name = "Helados" },
-            new Category { id = 5, name = "Enlatados"}
-            };
-
-            cmbCategory.DataSource = categories;
+                using var response = await client.GetAsync($"{CategoriesEndpoint}/categories_list");
+                response.EnsureSuccessStatusCode();
+                var responseBody = await response.Content.ReadAsStringAsync();
+                var categories = JsonSerializer.Deserialize<List<Category>>(responseBody, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
+                return categories ?? new List<Category>();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al conectar con el servidor: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new List<Category>();
+            }
+        }
+        private async Task LoadDynamicCategories()
+        {
+            cmbCategory.DataSource = await GetAllCategories();
             cmbCategory.DisplayMember = "name";
             cmbCategory.ValueMember = "id";
         }
 
+        private async Task AddCategorie(string name)
+        {
+            var category = new Category
+            {
+                name = name
+            };
+            var json = JsonSerializer.Serialize(category);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var client = new HttpClient();
+            try
+            {
+                var response = await client.PostAsync($"{CategoriesEndpoint}/register_category", content);
+                var responseBody = await response.Content.ReadAsStringAsync();
+                if (response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Categoría agregada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    await LoadDynamicCategories();
+                }
+                else
+                {
+                    MessageBox.Show("Error al agregar la categoría: " + responseBody, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar la categoría: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private async void btnAddCategories_Click(object sender, EventArgs e)
+        {
+            string categoryName = textCategories.Text.Trim();
+            if (string.IsNullOrEmpty(categoryName))
+            {
+                MessageBox.Show("Por favor, ingrese un nombre de categoría.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            await AddCategorie(categoryName);
+            textCategories.Clear();
+
+        }
     }
 }

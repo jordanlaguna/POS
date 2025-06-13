@@ -28,14 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel1 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel7 = new Panel();
+            tableLayoutPanel5 = new TableLayoutPanel();
+            panel15 = new Panel();
             dateTimeAt = new DateTimePicker();
             label6 = new Label();
+            panel16 = new Panel();
+            btnAddCategories = new FontAwesome.Sharp.IconButton();
+            textCategories = new TextBox();
+            label10 = new Label();
+            panel6 = new Panel();
+            tableLayoutPanel4 = new TableLayoutPanel();
+            panel13 = new Panel();
+            label5 = new Label();
+            textBarCode = new TextBox();
+            panel14 = new Panel();
+            cmbCategory = new ComboBox();
+            label9 = new Label();
             panel2 = new Panel();
             label1 = new Label();
             textName = new TextBox();
@@ -65,17 +79,16 @@
             ColumnStock = new DataGridViewTextBoxColumn();
             ColumnBarCode = new DataGridViewTextBoxColumn();
             ColumnCreatedAt = new DataGridViewTextBoxColumn();
-            panel6 = new Panel();
-            tableLayoutPanel4 = new TableLayoutPanel();
-            panel13 = new Panel();
-            panel14 = new Panel();
-            label5 = new Label();
-            textBarCode = new TextBox();
-            label9 = new Label();
-            cmbCategory = new ComboBox();
             panel1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel7.SuspendLayout();
+            tableLayoutPanel5.SuspendLayout();
+            panel15.SuspendLayout();
+            panel16.SuspendLayout();
+            panel6.SuspendLayout();
+            tableLayoutPanel4.SuspendLayout();
+            panel13.SuspendLayout();
+            panel14.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
@@ -88,10 +101,6 @@
             panel9.SuspendLayout();
             panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tableInventory).BeginInit();
-            panel6.SuspendLayout();
-            tableLayoutPanel4.SuspendLayout();
-            panel13.SuspendLayout();
-            panel14.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -129,36 +138,204 @@
             // panel7
             // 
             panel7.BackColor = Color.White;
-            panel7.Controls.Add(dateTimeAt);
-            panel7.Controls.Add(label6);
+            panel7.Controls.Add(tableLayoutPanel5);
             panel7.Dock = DockStyle.Fill;
             panel7.Location = new Point(3, 279);
             panel7.Name = "panel7";
             panel7.Size = new Size(930, 54);
             panel7.TabIndex = 7;
             // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.ColumnCount = 2;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Controls.Add(panel15, 0, 0);
+            tableLayoutPanel5.Controls.Add(panel16, 1, 0);
+            tableLayoutPanel5.Dock = DockStyle.Fill;
+            tableLayoutPanel5.Location = new Point(0, 0);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 1;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Size = new Size(930, 54);
+            tableLayoutPanel5.TabIndex = 0;
+            // 
+            // panel15
+            // 
+            panel15.Controls.Add(dateTimeAt);
+            panel15.Controls.Add(label6);
+            panel15.Dock = DockStyle.Fill;
+            panel15.Location = new Point(3, 3);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(459, 48);
+            panel15.TabIndex = 0;
+            // 
             // dateTimeAt
             // 
             dateTimeAt.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dateTimeAt.Font = new Font("Verdana", 12F);
             dateTimeAt.Format = DateTimePickerFormat.Short;
-            dateTimeAt.Location = new Point(212, 9);
+            dateTimeAt.Location = new Point(194, 8);
             dateTimeAt.Margin = new Padding(2);
             dateTimeAt.Name = "dateTimeAt";
             dateTimeAt.RightToLeft = RightToLeft.No;
-            dateTimeAt.Size = new Size(303, 32);
-            dateTimeAt.TabIndex = 11;
+            dateTimeAt.Size = new Size(255, 32);
+            dateTimeAt.TabIndex = 13;
             // 
             // label6
             // 
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             label6.AutoSize = true;
             label6.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(15, 15);
+            label6.Location = new Point(9, 11);
             label6.Name = "label6";
             label6.Size = new Size(177, 26);
-            label6.TabIndex = 10;
+            label6.TabIndex = 12;
             label6.Text = "Fecha de Ingreso:";
+            // 
+            // panel16
+            // 
+            panel16.Controls.Add(btnAddCategories);
+            panel16.Controls.Add(textCategories);
+            panel16.Controls.Add(label10);
+            panel16.Dock = DockStyle.Fill;
+            panel16.Location = new Point(468, 3);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(459, 48);
+            panel16.TabIndex = 1;
+            // 
+            // btnAddCategories
+            // 
+            btnAddCategories.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAddCategories.BackColor = Color.FromArgb(11, 47, 75);
+            btnAddCategories.Cursor = Cursors.Hand;
+            btnAddCategories.FlatAppearance.BorderColor = Color.White;
+            btnAddCategories.FlatAppearance.BorderSize = 2;
+            btnAddCategories.FlatStyle = FlatStyle.Flat;
+            btnAddCategories.Font = new Font("Times New Roman", 12F);
+            btnAddCategories.ForeColor = Color.White;
+            btnAddCategories.IconChar = FontAwesome.Sharp.IconChar.Add;
+            btnAddCategories.IconColor = Color.White;
+            btnAddCategories.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnAddCategories.IconSize = 1;
+            btnAddCategories.Location = new Point(367, 5);
+            btnAddCategories.Name = "btnAddCategories";
+            btnAddCategories.RightToLeft = RightToLeft.No;
+            btnAddCategories.Size = new Size(92, 38);
+            btnAddCategories.TabIndex = 15;
+            btnAddCategories.Text = "Agregar";
+            btnAddCategories.TextAlign = ContentAlignment.MiddleRight;
+            btnAddCategories.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAddCategories.UseVisualStyleBackColor = false;
+            btnAddCategories.UseWaitCursor = true;
+            btnAddCategories.Click += btnAddCategories_Click;
+            // 
+            // textCategories
+            // 
+            textCategories.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textCategories.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textCategories.Location = new Point(181, 7);
+            textCategories.Name = "textCategories";
+            textCategories.PlaceholderText = "Nueva categoría";
+            textCategories.Size = new Size(187, 34);
+            textCategories.TabIndex = 14;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(3, 11);
+            label10.Name = "label10";
+            label10.Size = new Size(172, 26);
+            label10.TabIndex = 13;
+            label10.Text = "Nueva Categoría:";
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.White;
+            panel6.Controls.Add(tableLayoutPanel4);
+            panel6.Dock = DockStyle.Fill;
+            panel6.Location = new Point(3, 224);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(930, 49);
+            panel6.TabIndex = 6;
+            // 
+            // tableLayoutPanel4
+            // 
+            tableLayoutPanel4.ColumnCount = 2;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel4.Controls.Add(panel13, 0, 0);
+            tableLayoutPanel4.Controls.Add(panel14, 1, 0);
+            tableLayoutPanel4.Dock = DockStyle.Fill;
+            tableLayoutPanel4.Location = new Point(0, 0);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 1;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel4.Size = new Size(930, 49);
+            tableLayoutPanel4.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            panel13.Controls.Add(label5);
+            panel13.Controls.Add(textBarCode);
+            panel13.Dock = DockStyle.Fill;
+            panel13.Location = new Point(3, 3);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(459, 43);
+            panel13.TabIndex = 0;
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label5.AutoSize = true;
+            label5.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(9, 8);
+            label5.Name = "label5";
+            label5.Size = new Size(185, 26);
+            label5.TabIndex = 11;
+            label5.Text = "Código de Barras: ";
+            // 
+            // textBarCode
+            // 
+            textBarCode.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textBarCode.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBarCode.Location = new Point(197, 4);
+            textBarCode.Name = "textBarCode";
+            textBarCode.PlaceholderText = "Ingrese el código de barras";
+            textBarCode.Size = new Size(255, 34);
+            textBarCode.TabIndex = 10;
+            // 
+            // panel14
+            // 
+            panel14.Controls.Add(cmbCategory);
+            panel14.Controls.Add(label9);
+            panel14.Dock = DockStyle.Fill;
+            panel14.Location = new Point(468, 3);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(459, 43);
+            panel14.TabIndex = 1;
+            // 
+            // cmbCategory
+            // 
+            cmbCategory.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            cmbCategory.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbCategory.FormattingEnabled = true;
+            cmbCategory.Location = new Point(135, 4);
+            cmbCategory.Name = "cmbCategory";
+            cmbCategory.Size = new Size(318, 34);
+            cmbCategory.TabIndex = 13;
+            // 
+            // label9
+            // 
+            label9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label9.AutoSize = true;
+            label9.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(3, 7);
+            label9.Name = "label9";
+            label9.Size = new Size(112, 26);
+            label9.TabIndex = 12;
+            label9.Text = "Categoría: ";
             // 
             // panel2
             // 
@@ -237,15 +414,15 @@
             // tableLayoutPanel3
             // 
             tableLayoutPanel3.ColumnCount = 2;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 48.60215F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 51.39785F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel3.Controls.Add(panel10, 0, 0);
             tableLayoutPanel3.Controls.Add(panel11, 1, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
             tableLayoutPanel3.Location = new Point(0, 0);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel3.Size = new Size(930, 49);
             tableLayoutPanel3.TabIndex = 0;
             // 
@@ -256,7 +433,7 @@
             panel10.Dock = DockStyle.Fill;
             panel10.Location = new Point(3, 3);
             panel10.Name = "panel10";
-            panel10.Size = new Size(446, 43);
+            panel10.Size = new Size(459, 43);
             panel10.TabIndex = 0;
             // 
             // label3
@@ -277,7 +454,7 @@
             textPrice.Location = new Point(101, 5);
             textPrice.Name = "textPrice";
             textPrice.PlaceholderText = "Ingrese el precio";
-            textPrice.Size = new Size(342, 34);
+            textPrice.Size = new Size(355, 34);
             textPrice.TabIndex = 4;
             // 
             // panel11
@@ -285,9 +462,9 @@
             panel11.Controls.Add(textStock);
             panel11.Controls.Add(label4);
             panel11.Dock = DockStyle.Fill;
-            panel11.Location = new Point(455, 3);
+            panel11.Location = new Point(468, 3);
             panel11.Name = "panel11";
-            panel11.Size = new Size(472, 43);
+            panel11.Size = new Size(459, 43);
             panel11.TabIndex = 1;
             // 
             // textStock
@@ -297,7 +474,7 @@
             textStock.Location = new Point(135, 5);
             textStock.Name = "textStock";
             textStock.PlaceholderText = "Ingrese existencias";
-            textStock.Size = new Size(331, 34);
+            textStock.Size = new Size(318, 34);
             textStock.TabIndex = 6;
             // 
             // label4
@@ -418,38 +595,38 @@
             tableInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             tableInventory.BackgroundColor = Color.FromArgb(26, 46, 53);
             tableInventory.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.SeaShell;
-            dataGridViewCellStyle4.Font = new Font("Times New Roman", 11F);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            tableInventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.SeaShell;
+            dataGridViewCellStyle1.Font = new Font("Times New Roman", 11F);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            tableInventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             tableInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tableInventory.Columns.AddRange(new DataGridViewColumn[] { ColumnName, ColumnDescription, ColumnPrice, ColumnStock, ColumnBarCode, ColumnCreatedAt });
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(26, 211, 238);
-            dataGridViewCellStyle5.Font = new Font("Times New Roman", 12F);
-            dataGridViewCellStyle5.ForeColor = Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle5.SelectionForeColor = Color.Transparent;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            tableInventory.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(26, 211, 238);
+            dataGridViewCellStyle2.Font = new Font("Times New Roman", 12F);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Transparent;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            tableInventory.DefaultCellStyle = dataGridViewCellStyle2;
             tableInventory.Dock = DockStyle.Fill;
             tableInventory.GridColor = SystemColors.ControlDark;
             tableInventory.Location = new Point(0, 0);
             tableInventory.Margin = new Padding(0);
             tableInventory.Name = "tableInventory";
             tableInventory.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Control;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            tableInventory.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            tableInventory.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             tableInventory.RowHeadersVisible = false;
             tableInventory.RowHeadersWidth = 62;
             tableInventory.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -516,93 +693,6 @@
             ColumnCreatedAt.Name = "ColumnCreatedAt";
             ColumnCreatedAt.ReadOnly = true;
             // 
-            // panel6
-            // 
-            panel6.BackColor = Color.White;
-            panel6.Controls.Add(tableLayoutPanel4);
-            panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(3, 224);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(930, 49);
-            panel6.TabIndex = 6;
-            // 
-            // tableLayoutPanel4
-            // 
-            tableLayoutPanel4.ColumnCount = 2;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Controls.Add(panel13, 0, 0);
-            tableLayoutPanel4.Controls.Add(panel14, 1, 0);
-            tableLayoutPanel4.Dock = DockStyle.Fill;
-            tableLayoutPanel4.Location = new Point(0, 0);
-            tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 1;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel4.Size = new Size(930, 49);
-            tableLayoutPanel4.TabIndex = 0;
-            // 
-            // panel13
-            // 
-            panel13.Controls.Add(label5);
-            panel13.Controls.Add(textBarCode);
-            panel13.Dock = DockStyle.Fill;
-            panel13.Location = new Point(3, 3);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(459, 43);
-            panel13.TabIndex = 0;
-            // 
-            // panel14
-            // 
-            panel14.Controls.Add(cmbCategory);
-            panel14.Controls.Add(label9);
-            panel14.Dock = DockStyle.Fill;
-            panel14.Location = new Point(468, 3);
-            panel14.Name = "panel14";
-            panel14.Size = new Size(459, 43);
-            panel14.TabIndex = 1;
-            // 
-            // label5
-            // 
-            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            label5.AutoSize = true;
-            label5.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(9, 8);
-            label5.Name = "label5";
-            label5.Size = new Size(185, 26);
-            label5.TabIndex = 11;
-            label5.Text = "Código de Barras: ";
-            // 
-            // textBarCode
-            // 
-            textBarCode.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBarCode.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBarCode.Location = new Point(197, 4);
-            textBarCode.Name = "textBarCode";
-            textBarCode.PlaceholderText = "Ingrese el código de barras";
-            textBarCode.Size = new Size(255, 34);
-            textBarCode.TabIndex = 10;
-            // 
-            // label9
-            // 
-            label9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            label9.AutoSize = true;
-            label9.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(3, 7);
-            label9.Name = "label9";
-            label9.Size = new Size(112, 26);
-            label9.TabIndex = 12;
-            label9.Text = "Categoría: ";
-            // 
-            // cmbCategory
-            // 
-            cmbCategory.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            cmbCategory.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmbCategory.FormattingEnabled = true;
-            cmbCategory.Location = new Point(122, 4);
-            cmbCategory.Name = "cmbCategory";
-            cmbCategory.Size = new Size(331, 34);
-            cmbCategory.TabIndex = 13;
-            // 
             // Inventory
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -618,7 +708,17 @@
             panel1.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             panel7.ResumeLayout(false);
-            panel7.PerformLayout();
+            tableLayoutPanel5.ResumeLayout(false);
+            panel15.ResumeLayout(false);
+            panel15.PerformLayout();
+            panel16.ResumeLayout(false);
+            panel16.PerformLayout();
+            panel6.ResumeLayout(false);
+            tableLayoutPanel4.ResumeLayout(false);
+            panel13.ResumeLayout(false);
+            panel13.PerformLayout();
+            panel14.ResumeLayout(false);
+            panel14.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
@@ -637,12 +737,6 @@
             panel9.PerformLayout();
             panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)tableInventory).EndInit();
-            panel6.ResumeLayout(false);
-            tableLayoutPanel4.ResumeLayout(false);
-            panel13.ResumeLayout(false);
-            panel13.PerformLayout();
-            panel14.ResumeLayout(false);
-            panel14.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -669,8 +763,6 @@
         private TextBox textStock;
         private Label label4;
         private Panel panel7;
-        private DateTimePicker dateTimeAt;
-        private Label label6;
         private Panel panel5;
         private Label label7;
         private Panel panel12;
@@ -690,5 +782,13 @@
         private Panel panel14;
         private ComboBox cmbCategory;
         private Label label9;
+        private TableLayoutPanel tableLayoutPanel5;
+        private Panel panel15;
+        private DateTimePicker dateTimeAt;
+        private Label label6;
+        private Panel panel16;
+        private Label label10;
+        private FontAwesome.Sharp.IconButton btnAddCategories;
+        private TextBox textCategories;
     }
 }
