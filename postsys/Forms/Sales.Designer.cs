@@ -36,15 +36,15 @@
             panel1 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel2 = new Panel();
+            textCode = new TextBox();
             label3 = new Label();
-            textBox1 = new TextBox();
             panel3 = new Panel();
             button1 = new Button();
             panel4 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel6 = new Panel();
-            button4 = new Button();
-            button6 = new Button();
+            textQuantity = new TextBox();
+            label4 = new Label();
             panel7 = new Panel();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             panel5 = new Panel();
@@ -55,15 +55,22 @@
             iconButton2 = new FontAwesome.Sharp.IconButton();
             label1 = new Label();
             panel11 = new Panel();
+            label8 = new Label();
+            label9 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label5 = new Label();
             label2 = new Label();
             panel8 = new Panel();
             pictureBox5 = new PictureBox();
             panel9 = new Panel();
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
+            tableSale = new DataGridView();
+            barCode = new DataGridViewTextBoxColumn();
+            Descripcion = new DataGridViewTextBoxColumn();
+            price = new DataGridViewTextBoxColumn();
+            quantity = new DataGridViewTextBoxColumn();
+            totalPrice = new DataGridViewTextBoxColumn();
+            Stock = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -79,7 +86,7 @@
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tableSale).BeginInit();
             SuspendLayout();
             // 
             // iconMenuItem1
@@ -120,14 +127,26 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(textCode);
             panel2.Controls.Add(label3);
-            panel2.Controls.Add(textBox1);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 3);
             panel2.Name = "panel2";
             panel2.Size = new Size(702, 78);
             panel2.TabIndex = 0;
             panel2.UseWaitCursor = true;
+            // 
+            // textCode
+            // 
+            textCode.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textCode.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textCode.Location = new Point(248, 22);
+            textCode.Name = "textCode";
+            textCode.PlaceholderText = "Ingrese el código";
+            textCode.Size = new Size(413, 34);
+            textCode.TabIndex = 20;
+            textCode.UseWaitCursor = true;
+            textCode.KeyDown += txtBarCodeSearch;
             // 
             // label3
             // 
@@ -142,18 +161,6 @@
             label3.TabIndex = 19;
             label3.Text = "Código de Producto:";
             label3.UseWaitCursor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.BackColor = Color.PaleTurquoise;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Verdana", 16F);
-            textBox1.Location = new Point(240, 22);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(435, 33);
-            textBox1.TabIndex = 16;
-            textBox1.UseWaitCursor = true;
             // 
             // panel3
             // 
@@ -212,8 +219,8 @@
             // panel6
             // 
             panel6.BackColor = Color.White;
-            panel6.Controls.Add(button4);
-            panel6.Controls.Add(button6);
+            panel6.Controls.Add(textQuantity);
+            panel6.Controls.Add(label4);
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(3, 3);
             panel6.Name = "panel6";
@@ -221,35 +228,30 @@
             panel6.TabIndex = 0;
             panel6.UseWaitCursor = true;
             // 
-            // button4
+            // textQuantity
             // 
-            button4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            button4.BackColor = Color.PaleTurquoise;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Times New Roman", 12F);
-            button4.Location = new Point(7, 2);
-            button4.Name = "button4";
-            button4.Size = new Size(120, 45);
-            button4.TabIndex = 18;
-            button4.Text = "Ticket Act.";
-            button4.UseVisualStyleBackColor = false;
-            button4.UseWaitCursor = true;
+            textQuantity.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textQuantity.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textQuantity.Location = new Point(125, 8);
+            textQuantity.Name = "textQuantity";
+            textQuantity.PlaceholderText = "Ingrese la cantidad";
+            textQuantity.Size = new Size(413, 34);
+            textQuantity.TabIndex = 21;
+            textQuantity.UseWaitCursor = true;
             // 
-            // button6
+            // label4
             // 
-            button6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            button6.BackColor = Color.PaleTurquoise;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Times New Roman", 12F);
-            button6.Location = new Point(132, 2);
-            button6.Name = "button6";
-            button6.Size = new Size(120, 45);
-            button6.TabIndex = 19;
-            button6.Text = "Agregar Tic. ";
-            button6.UseVisualStyleBackColor = false;
-            button6.UseWaitCursor = true;
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.FlatStyle = FlatStyle.Flat;
+            label4.Font = new Font("Times New Roman", 16F);
+            label4.Location = new Point(3, 9);
+            label4.Name = "label4";
+            label4.Size = new Size(119, 31);
+            label4.TabIndex = 21;
+            label4.Text = "Cantidad:";
+            label4.UseWaitCursor = true;
             // 
             // panel7
             // 
@@ -399,7 +401,12 @@
             // 
             // panel11
             // 
-            panel11.BackColor = Color.White;
+            panel11.BackColor = Color.SeaShell;
+            panel11.Controls.Add(label8);
+            panel11.Controls.Add(label9);
+            panel11.Controls.Add(label6);
+            panel11.Controls.Add(label7);
+            panel11.Controls.Add(label5);
             panel11.Controls.Add(label2);
             panel11.Dock = DockStyle.Fill;
             panel11.Location = new Point(696, 3);
@@ -408,16 +415,74 @@
             panel11.TabIndex = 1;
             panel11.UseWaitCursor = true;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(139, 43);
+            label8.Name = "label8";
+            label8.Size = new Size(29, 33);
+            label8.TabIndex = 18;
+            label8.Text = "0";
+            label8.UseWaitCursor = true;
+            label8.Click += label8_Click;
+            // 
+            // label9
+            // 
+            label9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label9.AutoSize = true;
+            label9.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(10, 43);
+            label9.Name = "label9";
+            label9.Size = new Size(122, 33);
+            label9.TabIndex = 17;
+            label9.Text = "IVA 13%:";
+            label9.UseWaitCursor = true;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(139, 7);
+            label6.Name = "label6";
+            label6.Size = new Size(29, 33);
+            label6.TabIndex = 16;
+            label6.Text = "0";
+            label6.UseWaitCursor = true;
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label7.AutoSize = true;
+            label7.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(10, 7);
+            label7.Name = "label7";
+            label7.Size = new Size(136, 33);
+            label7.TabIndex = 15;
+            label7.Text = "Sub. Total:";
+            label7.UseWaitCursor = true;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(139, 81);
+            label5.Name = "label5";
+            label5.Size = new Size(29, 33);
+            label5.TabIndex = 14;
+            label5.Text = "0";
+            label5.UseWaitCursor = true;
+            // 
             // label2
             // 
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 12F);
-            label2.Location = new Point(100, 49);
+            label2.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(8, 81);
             label2.Name = "label2";
-            label2.Size = new Size(51, 22);
+            label2.Size = new Size(79, 33);
             label2.TabIndex = 13;
-            label2.Text = "Total";
+            label2.Text = "Total:";
             label2.UseWaitCursor = true;
             // 
             // panel8
@@ -445,7 +510,7 @@
             // 
             // panel9
             // 
-            panel9.Controls.Add(dataGridView1);
+            panel9.Controls.Add(tableSale);
             panel9.Dock = DockStyle.Fill;
             panel9.Location = new Point(0, 141);
             panel9.Name = "panel9";
@@ -454,40 +519,40 @@
             panel9.TabIndex = 4;
             panel9.UseWaitCursor = true;
             // 
-            // dataGridView1
+            // tableSale
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AllowUserToResizeColumns = false;
-            dataGridView1.AllowUserToResizeRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.FromArgb(11, 47, 75);
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
-            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            tableSale.AllowUserToAddRows = false;
+            tableSale.AllowUserToDeleteRows = false;
+            tableSale.AllowUserToResizeColumns = false;
+            tableSale.AllowUserToResizeRows = false;
+            tableSale.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            tableSale.BackgroundColor = Color.FromArgb(11, 47, 75);
+            tableSale.BorderStyle = BorderStyle.None;
+            tableSale.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
+            tableSale.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
             dataGridViewCellStyle1.Font = new Font("Times New Roman", 14F);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Transparent;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
+            tableSale.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            tableSale.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tableSale.Columns.AddRange(new DataGridViewColumn[] { barCode, Descripcion, price, quantity, totalPrice, Stock });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(26, 211, 238);
             dataGridViewCellStyle2.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(3, 0);
-            dataGridView1.Margin = new Padding(0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
+            tableSale.DefaultCellStyle = dataGridViewCellStyle2;
+            tableSale.Dock = DockStyle.Fill;
+            tableSale.Location = new Point(3, 0);
+            tableSale.Margin = new Padding(0);
+            tableSale.Name = "tableSale";
+            tableSale.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.Control;
             dataGridViewCellStyle3.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -495,45 +560,68 @@
             dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridView1.Size = new Size(949, 395);
-            dataGridView1.TabIndex = 4;
-            dataGridView1.UseWaitCursor = true;
+            tableSale.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            tableSale.RowHeadersVisible = false;
+            tableSale.RowHeadersWidth = 51;
+            tableSale.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            tableSale.Size = new Size(949, 395);
+            tableSale.TabIndex = 4;
+            tableSale.UseWaitCursor = true;
             // 
-            // Column1
+            // barCode
             // 
-            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column1.HeaderText = "Código de Barras";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            barCode.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            barCode.DataPropertyName = "barcode";
+            barCode.HeaderText = "Código B.";
+            barCode.MinimumWidth = 6;
+            barCode.Name = "barCode";
+            barCode.ReadOnly = true;
             // 
-            // Column2
+            // Descripcion
             // 
-            Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column2.HeaderText = "Descripción";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
+            Descripcion.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Descripcion.DataPropertyName = "name";
+            Descripcion.HeaderText = "Descripción";
+            Descripcion.MinimumWidth = 6;
+            Descripcion.Name = "Descripcion";
+            Descripcion.ReadOnly = true;
             // 
-            // Column3
+            // price
             // 
-            Column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column3.HeaderText = "Precion U.";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
+            price.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            price.DataPropertyName = "price";
+            price.HeaderText = "Precion U.";
+            price.MinimumWidth = 6;
+            price.Name = "price";
+            price.ReadOnly = true;
             // 
-            // Column4
+            // quantity
             // 
-            Column4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column4.HeaderText = "Cantidad";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
+            quantity.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            quantity.DataPropertyName = "quantity";
+            quantity.HeaderText = "Cantidad";
+            quantity.MinimumWidth = 6;
+            quantity.Name = "quantity";
+            quantity.ReadOnly = true;
+            // 
+            // totalPrice
+            // 
+            totalPrice.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            totalPrice.DataPropertyName = "totalPrice";
+            totalPrice.HeaderText = "Precio T.";
+            totalPrice.MinimumWidth = 6;
+            totalPrice.Name = "totalPrice";
+            totalPrice.ReadOnly = true;
+            // 
+            // Stock
+            // 
+            Stock.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Stock.DataPropertyName = "stock";
+            Stock.HeaderText = "Stock";
+            Stock.MinimumWidth = 6;
+            Stock.Name = "Stock";
+            Stock.ReadOnly = true;
+            Stock.Visible = false;
             // 
             // Sales
             // 
@@ -558,6 +646,7 @@
             panel4.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             panel7.ResumeLayout(false);
             panel5.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
@@ -568,7 +657,7 @@
             panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tableSale).EndInit();
             ResumeLayout(false);
         }
 
@@ -579,14 +668,11 @@
         private Panel panel2;
         private Panel panel3;
         private Button button1;
-        private TextBox textBox1;
         private Label label3;
         private Panel panel4;
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panel5;
         private Panel panel6;
-        private Button button4;
-        private Button button6;
         private Panel panel7;
         private FontAwesome.Sharp.IconButton iconButton1;
         private Panel panel8;
@@ -600,10 +686,20 @@
         private Button button2;
         private Label label2;
         private Panel panel9;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
+        private DataGridView tableSale;
+        private Label label4;
+        private TextBox textCode;
+        private TextBox textQuantity;
+        private DataGridViewTextBoxColumn barCode;
+        private DataGridViewTextBoxColumn Descripcion;
+        private DataGridViewTextBoxColumn price;
+        private DataGridViewTextBoxColumn quantity;
+        private DataGridViewTextBoxColumn totalPrice;
+        private DataGridViewTextBoxColumn Stock;
+        private Label label6;
+        private Label label7;
+        private Label label5;
+        private Label label8;
+        private Label label9;
     }
 }
