@@ -50,17 +50,20 @@
             panel5 = new Panel();
             tableLayoutPanel3 = new TableLayoutPanel();
             panel10 = new Panel();
-            button2 = new Button();
+            btnCollect = new Button();
             iconButton3 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             label1 = new Label();
             panel11 = new Panel();
-            label8 = new Label();
-            label9 = new Label();
-            label6 = new Label();
+            tableLayoutPanel4 = new TableLayoutPanel();
+            panel12 = new Panel();
             label7 = new Label();
-            label5 = new Label();
+            label9 = new Label();
             label2 = new Label();
+            panel13 = new Panel();
+            label8 = new Label();
+            label5 = new Label();
+            label6 = new Label();
             panel8 = new Panel();
             pictureBox5 = new PictureBox();
             panel9 = new Panel();
@@ -83,6 +86,9 @@
             tableLayoutPanel3.SuspendLayout();
             panel10.SuspendLayout();
             panel11.SuspendLayout();
+            tableLayoutPanel4.SuspendLayout();
+            panel12.SuspendLayout();
+            panel13.SuspendLayout();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             panel9.SuspendLayout();
@@ -140,9 +146,9 @@
             // 
             textCode.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textCode.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textCode.Location = new Point(248, 22);
+            textCode.Location = new Point(254, 22);
             textCode.Name = "textCode";
-            textCode.PlaceholderText = "Ingrese el código";
+            textCode.PlaceholderText = "Ingrese el nombre";
             textCode.Size = new Size(413, 34);
             textCode.TabIndex = 20;
             textCode.UseWaitCursor = true;
@@ -157,9 +163,9 @@
             label3.Font = new Font("Times New Roman", 16F);
             label3.Location = new Point(3, 23);
             label3.Name = "label3";
-            label3.Size = new Size(239, 31);
+            label3.Size = new Size(248, 31);
             label3.TabIndex = 19;
-            label3.Text = "Código de Producto:";
+            label3.Text = "Nombre de Producto:";
             label3.UseWaitCursor = true;
             // 
             // panel3
@@ -179,7 +185,6 @@
             button1.BackColor = Color.Green;
             button1.BackgroundImageLayout = ImageLayout.Center;
             button1.FlatAppearance.BorderColor = Color.Green;
-            button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Times New Roman", 12F);
             button1.ForeColor = Color.Black;
             button1.Location = new Point(23, 3);
@@ -270,7 +275,6 @@
             iconButton1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             iconButton1.BackColor = Color.Gray;
             iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Flat;
             iconButton1.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
             iconButton1.Font = new Font("Times New Roman", 12F);
             iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
@@ -300,15 +304,15 @@
             // tableLayoutPanel3
             // 
             tableLayoutPanel3.ColumnCount = 2;
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 72.65958F));
-            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 27.3404255F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 68F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 32F));
             tableLayoutPanel3.Controls.Add(panel10, 0, 0);
             tableLayoutPanel3.Controls.Add(panel11, 1, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
             tableLayoutPanel3.Location = new Point(0, 0);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel3.Size = new Size(954, 127);
             tableLayoutPanel3.TabIndex = 0;
             tableLayoutPanel3.UseWaitCursor = true;
@@ -316,34 +320,34 @@
             // panel10
             // 
             panel10.BackColor = Color.White;
-            panel10.Controls.Add(button2);
+            panel10.Controls.Add(btnCollect);
             panel10.Controls.Add(iconButton3);
             panel10.Controls.Add(iconButton2);
             panel10.Controls.Add(label1);
             panel10.Dock = DockStyle.Fill;
             panel10.Location = new Point(3, 3);
             panel10.Name = "panel10";
-            panel10.Size = new Size(687, 121);
+            panel10.Size = new Size(642, 121);
             panel10.TabIndex = 0;
             panel10.UseWaitCursor = true;
             // 
-            // button2
+            // btnCollect
             // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            button2.BackColor = Color.PaleTurquoise;
-            button2.BackgroundImageLayout = ImageLayout.Center;
-            button2.FlatAppearance.BorderColor = Color.White;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Times New Roman", 12F);
-            button2.ForeColor = Color.Black;
-            button2.Location = new Point(519, 28);
-            button2.Name = "button2";
-            button2.Size = new Size(142, 84);
-            button2.TabIndex = 23;
-            button2.Text = "F1 - Cobrar";
-            button2.UseVisualStyleBackColor = false;
-            button2.UseWaitCursor = true;
+            btnCollect.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            btnCollect.BackColor = Color.PaleTurquoise;
+            btnCollect.BackgroundImageLayout = ImageLayout.Center;
+            btnCollect.FlatAppearance.BorderColor = Color.White;
+            btnCollect.FlatAppearance.BorderSize = 0;
+            btnCollect.Font = new Font("Times New Roman", 12F);
+            btnCollect.ForeColor = Color.Black;
+            btnCollect.Location = new Point(474, 28);
+            btnCollect.Name = "btnCollect";
+            btnCollect.Size = new Size(142, 84);
+            btnCollect.TabIndex = 23;
+            btnCollect.Text = "F1 - Cobrar";
+            btnCollect.UseVisualStyleBackColor = false;
+            btnCollect.UseWaitCursor = true;
+            btnCollect.Click += btnCollect_Click;
             // 
             // iconButton3
             // 
@@ -351,7 +355,6 @@
             iconButton3.BackColor = Color.Red;
             iconButton3.FlatAppearance.BorderColor = Color.Red;
             iconButton3.FlatAppearance.BorderSize = 2;
-            iconButton3.FlatStyle = FlatStyle.Flat;
             iconButton3.Font = new Font("Times New Roman", 12F);
             iconButton3.IconChar = FontAwesome.Sharp.IconChar.Trash;
             iconButton3.IconColor = Color.FromArgb(11, 47, 75);
@@ -372,7 +375,6 @@
             iconButton2.BackColor = Color.Yellow;
             iconButton2.FlatAppearance.BorderColor = Color.Yellow;
             iconButton2.FlatAppearance.BorderSize = 2;
-            iconButton2.FlatStyle = FlatStyle.Flat;
             iconButton2.Font = new Font("Times New Roman", 12F);
             iconButton2.IconChar = FontAwesome.Sharp.IconChar.Edit;
             iconButton2.IconColor = Color.FromArgb(11, 47, 75);
@@ -401,25 +403,100 @@
             // 
             // panel11
             // 
-            panel11.BackColor = Color.SeaShell;
-            panel11.Controls.Add(label8);
-            panel11.Controls.Add(label9);
-            panel11.Controls.Add(label6);
-            panel11.Controls.Add(label7);
-            panel11.Controls.Add(label5);
-            panel11.Controls.Add(label2);
+            panel11.BackColor = Color.White;
+            panel11.Controls.Add(tableLayoutPanel4);
             panel11.Dock = DockStyle.Fill;
-            panel11.Location = new Point(696, 3);
+            panel11.Location = new Point(651, 3);
             panel11.Name = "panel11";
-            panel11.Size = new Size(255, 121);
+            panel11.Size = new Size(300, 121);
             panel11.TabIndex = 1;
             panel11.UseWaitCursor = true;
             // 
+            // tableLayoutPanel4
+            // 
+            tableLayoutPanel4.ColumnCount = 2;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel4.Controls.Add(panel12, 0, 0);
+            tableLayoutPanel4.Controls.Add(panel13, 1, 0);
+            tableLayoutPanel4.Dock = DockStyle.Fill;
+            tableLayoutPanel4.Location = new Point(0, 0);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 1;
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel4.Size = new Size(300, 121);
+            tableLayoutPanel4.TabIndex = 0;
+            tableLayoutPanel4.UseWaitCursor = true;
+            // 
+            // panel12
+            // 
+            panel12.BackColor = Color.SeaShell;
+            panel12.Controls.Add(label7);
+            panel12.Controls.Add(label9);
+            panel12.Controls.Add(label2);
+            panel12.Dock = DockStyle.Fill;
+            panel12.Location = new Point(3, 3);
+            panel12.Name = "panel12";
+            panel12.Size = new Size(144, 115);
+            panel12.TabIndex = 0;
+            panel12.UseWaitCursor = true;
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label7.AutoSize = true;
+            label7.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(4, 8);
+            label7.Name = "label7";
+            label7.Size = new Size(136, 33);
+            label7.TabIndex = 15;
+            label7.Text = "Sub. Total:";
+            label7.UseWaitCursor = true;
+            // 
+            // label9
+            // 
+            label9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label9.AutoSize = true;
+            label9.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(4, 45);
+            label9.Name = "label9";
+            label9.Size = new Size(122, 33);
+            label9.TabIndex = 17;
+            label9.Text = "IVA 13%:";
+            label9.UseWaitCursor = true;
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label2.AutoSize = true;
+            label2.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(1, 76);
+            label2.Name = "label2";
+            label2.Size = new Size(79, 33);
+            label2.TabIndex = 13;
+            label2.Text = "Total:";
+            label2.UseWaitCursor = true;
+            // 
+            // panel13
+            // 
+            panel13.BackColor = Color.SeaShell;
+            panel13.Controls.Add(label8);
+            panel13.Controls.Add(label5);
+            panel13.Controls.Add(label6);
+            panel13.Dock = DockStyle.Fill;
+            panel13.Location = new Point(153, 3);
+            panel13.Name = "panel13";
+            panel13.Padding = new Padding(5, 0, 0, 0);
+            panel13.Size = new Size(144, 115);
+            panel13.TabIndex = 1;
+            panel13.UseWaitCursor = true;
+            // 
             // label8
             // 
+            label8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label8.AutoSize = true;
             label8.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(139, 43);
+            label8.Location = new Point(8, 42);
             label8.Name = "label8";
             label8.Size = new Size(29, 33);
             label8.TabIndex = 18;
@@ -427,63 +504,29 @@
             label8.UseWaitCursor = true;
             label8.Click += label8_Click;
             // 
-            // label9
-            // 
-            label9.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label9.AutoSize = true;
-            label9.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(10, 43);
-            label9.Name = "label9";
-            label9.Size = new Size(122, 33);
-            label9.TabIndex = 17;
-            label9.Text = "IVA 13%:";
-            label9.UseWaitCursor = true;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(139, 7);
-            label6.Name = "label6";
-            label6.Size = new Size(29, 33);
-            label6.TabIndex = 16;
-            label6.Text = "0";
-            label6.UseWaitCursor = true;
-            // 
-            // label7
-            // 
-            label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label7.AutoSize = true;
-            label7.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(10, 7);
-            label7.Name = "label7";
-            label7.Size = new Size(136, 33);
-            label7.TabIndex = 15;
-            label7.Text = "Sub. Total:";
-            label7.UseWaitCursor = true;
-            // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(139, 81);
+            label5.Location = new Point(8, 78);
             label5.Name = "label5";
             label5.Size = new Size(29, 33);
             label5.TabIndex = 14;
             label5.Text = "0";
             label5.UseWaitCursor = true;
             // 
-            // label2
+            // label6
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(8, 81);
-            label2.Name = "label2";
-            label2.Size = new Size(79, 33);
-            label2.TabIndex = 13;
-            label2.Text = "Total:";
-            label2.UseWaitCursor = true;
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label6.AutoSize = true;
+            label6.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(8, 8);
+            label6.Name = "label6";
+            label6.Size = new Size(29, 33);
+            label6.TabIndex = 16;
+            label6.Text = "0";
+            label6.UseWaitCursor = true;
             // 
             // panel8
             // 
@@ -653,7 +696,11 @@
             panel10.ResumeLayout(false);
             panel10.PerformLayout();
             panel11.ResumeLayout(false);
-            panel11.PerformLayout();
+            tableLayoutPanel4.ResumeLayout(false);
+            panel12.ResumeLayout(false);
+            panel12.PerformLayout();
+            panel13.ResumeLayout(false);
+            panel13.PerformLayout();
             panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             panel9.ResumeLayout(false);
@@ -683,7 +730,7 @@
         private Label label1;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private Button button2;
+        private Button btnCollect;
         private Label label2;
         private Panel panel9;
         private DataGridView tableSale;
@@ -701,5 +748,8 @@
         private Label label5;
         private Label label8;
         private Label label9;
+        private TableLayoutPanel tableLayoutPanel4;
+        private Panel panel12;
+        private Panel panel13;
     }
 }

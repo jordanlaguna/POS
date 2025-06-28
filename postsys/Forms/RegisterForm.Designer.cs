@@ -411,7 +411,6 @@
             btnRegister.BackColor = Color.FromArgb(11, 47, 75);
             btnRegister.Cursor = Cursors.Hand;
             btnRegister.FlatAppearance.BorderColor = Color.White;
-            btnRegister.FlatStyle = FlatStyle.Flat;
             btnRegister.Font = new Font("Times New Roman", 13F);
             btnRegister.ForeColor = Color.White;
             btnRegister.Location = new Point(654, 611);

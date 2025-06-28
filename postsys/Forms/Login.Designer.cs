@@ -171,10 +171,9 @@
             btnLogin.BackColor = Color.FromArgb(11, 47, 75);
             btnLogin.Cursor = Cursors.Hand;
             btnLogin.FlatAppearance.BorderColor = Color.White;
-            btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Times New Roman", 13F);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(166, 601);
+            btnLogin.Location = new Point(166, 603);
             btnLogin.Margin = new Padding(0);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(265, 63);

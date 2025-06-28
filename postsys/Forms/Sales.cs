@@ -31,9 +31,9 @@ namespace postsys.Forms
             }
         }
 
-        private async Task SearchProductByBarcodeAsync(string barcode)
+        private async Task SearchProductByBarcodeAsync(string name)
         {
-            if (string.IsNullOrWhiteSpace(barcode))
+            if (string.IsNullOrWhiteSpace(name))
             {
                 MessageBox.Show("Por favor, ingrese un código de barras válido.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -42,7 +42,7 @@ namespace postsys.Forms
             using var client = new HttpClient();
             try
             {
-                var response = await client.GetAsync($"http://localhost:8000/products/product/{barcode}");
+                var response = await client.GetAsync($"http://localhost:8000/products/product/{name}");
                 if (response.IsSuccessStatusCode)
                 {
                     var json = await response.Content.ReadAsStringAsync();
@@ -165,6 +165,35 @@ namespace postsys.Forms
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCollect_Click(object sender, EventArgs e)
+        {
+            List<BillsProduct> products = GetProductsFromTable();
+            decimal subtotal = decimal.Parse(label6.Text.Replace("₡", "").Trim());
+            decimal iva = decimal.Parse(label8.Text.Replace("₡", "").Trim());
+            decimal totalAmount = decimal.Parse(label5.Text.Replace("₡", "").Trim());
+            string total = label5.Text.Replace("₡", "").Trim();
+            Bills bills = new Bills(products, total, iva, subtotal, totalAmount);
+            bills.ShowDialog();
+        }
+        private List<BillsProduct> GetProductsFromTable()
+        {
+            List<BillsProduct> products = new List<BillsProduct>();
+            foreach (DataGridViewRow row in tableSale.Rows)
+            {
+                if (row.Cells["barCode"].Value != null)
+                {
+                    products.Add(new BillsProduct
+                    {
+                        name = row.Cells["Descripcion"].Value.ToString(),
+                        quantity = int.Parse(row.Cells["quantity"].Value.ToString()),
+                        price = decimal.Parse(row.Cells["price"].Value.ToString())
+                    });
+                }
+
+            }
+            return products;
         }
     }
 }

@@ -524,7 +524,6 @@
             btnAgregar.Cursor = Cursors.Hand;
             btnAgregar.FlatAppearance.BorderColor = Color.Green;
             btnAgregar.FlatAppearance.BorderSize = 2;
-            btnAgregar.FlatStyle = FlatStyle.Flat;
             btnAgregar.Font = new Font("Times New Roman", 12F);
             btnAgregar.IconChar = FontAwesome.Sharp.IconChar.Add;
             btnAgregar.IconColor = Color.FromArgb(11, 47, 75);
@@ -558,7 +557,6 @@
             iconButton1.Cursor = Cursors.Hand;
             iconButton1.FlatAppearance.BorderColor = Color.Yellow;
             iconButton1.FlatAppearance.BorderSize = 2;
-            iconButton1.FlatStyle = FlatStyle.Flat;
             iconButton1.Font = new Font("Times New Roman", 12F);
             iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
             iconButton1.IconColor = Color.FromArgb(11, 47, 75);
@@ -591,7 +589,6 @@
             iconButton3.Cursor = Cursors.Hand;
             iconButton3.FlatAppearance.BorderColor = Color.Red;
             iconButton3.FlatAppearance.BorderSize = 2;
-            iconButton3.FlatStyle = FlatStyle.Flat;
             iconButton3.Font = new Font("Times New Roman", 12F);
             iconButton3.IconChar = FontAwesome.Sharp.IconChar.Close;
             iconButton3.IconColor = Color.FromArgb(11, 47, 75);
@@ -704,7 +701,7 @@
             tableClients.AllowUserToResizeColumns = false;
             tableClients.AllowUserToResizeRows = false;
             tableClients.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            tableClients.BackgroundColor = Color.FromArgb(26, 46, 53);
+            tableClients.BackgroundColor = Color.FromArgb(11, 47, 75);
             tableClients.BorderStyle = BorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.SeaShell;

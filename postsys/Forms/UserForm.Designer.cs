@@ -519,7 +519,6 @@
             iconButton2.Cursor = Cursors.Hand;
             iconButton2.FlatAppearance.BorderColor = Color.Yellow;
             iconButton2.FlatAppearance.BorderSize = 2;
-            iconButton2.FlatStyle = FlatStyle.Flat;
             iconButton2.Font = new Font("Times New Roman", 12F);
             iconButton2.IconChar = FontAwesome.Sharp.IconChar.Edit;
             iconButton2.IconColor = Color.FromArgb(11, 47, 75);
@@ -552,7 +551,6 @@
             iconButton3.Cursor = Cursors.Hand;
             iconButton3.FlatAppearance.BorderColor = Color.Red;
             iconButton3.FlatAppearance.BorderSize = 2;
-            iconButton3.FlatStyle = FlatStyle.Flat;
             iconButton3.Font = new Font("Times New Roman", 12F);
             iconButton3.IconChar = FontAwesome.Sharp.IconChar.Close;
             iconButton3.IconColor = Color.FromArgb(11, 47, 75);
@@ -665,7 +663,7 @@
             tableUsers.AllowUserToResizeColumns = false;
             tableUsers.AllowUserToResizeRows = false;
             tableUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            tableUsers.BackgroundColor = Color.FromArgb(26, 46, 53);
+            tableUsers.BackgroundColor = Color.FromArgb(11, 47, 75);
             tableUsers.BorderStyle = BorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.SeaShell;

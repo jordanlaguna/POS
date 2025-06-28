@@ -593,7 +593,7 @@
             tableInventory.AllowUserToResizeColumns = false;
             tableInventory.AllowUserToResizeRows = false;
             tableInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            tableInventory.BackgroundColor = Color.FromArgb(26, 46, 53);
+            tableInventory.BackgroundColor = Color.FromArgb(11, 47, 75);
             tableInventory.BorderStyle = BorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.SeaShell;

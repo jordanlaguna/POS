@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\jorda\\Documents\\visual\\postsys\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|c:\\users\\jorda\\documents\\visual\\postsys\\postsys\\services\\billsexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|solutionrelative:postsys\\services\\billsexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|c:\\users\\jorda\\documents\\visual\\postsys\\postsys\\forms\\bills.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|solutionrelative:postsys\\forms\\bills.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|c:\\users\\jorda\\documents\\visual\\postsys\\postsys\\model\\billsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|solutionrelative:postsys\\model\\billsmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|c:\\users\\jorda\\documents\\visual\\postsys\\postsys\\forms\\sales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|solutionrelative:postsys\\forms\\sales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|c:\\users\\jorda\\documents\\visual\\postsys\\postsys\\forms\\sales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|c:\\users\\jorda\\documents\\visual\\postsys\\postsys\\forms\\bills.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|solutionrelative:postsys\\forms\\bills.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\forms\\sales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|solutionrelative:postsys\\forms\\sales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\forms\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|solutionrelative:postsys\\forms\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|c:\\users\\jorda\\documents\\visual\\postsys\\postsys\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|solutionrelative:postsys\\model\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|c:\\users\\jorda\\documents\\visual\\postsys\\postsys\\forms\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|solutionrelative:postsys\\forms\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\forms\\clientform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|solutionrelative:postsys\\forms\\clientform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|c:\\users\\jorda\\documents\\visual\\postsys\\postsys\\model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|solutionrelative:postsys\\model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|c:\\users\\jorda\\documents\\visual\\postsys\\postsys\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{064B9938-0F84-41E1-B9B7-A94CDE599610}|postsys\\postsys.csproj|solutionrelative:postsys\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,90 +54,91 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\model\\Product.cs",
-              "RelativeDocumentMoniker": "postsys\\model\\Product.cs",
-              "ToolTip": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\model\\Product.cs",
-              "RelativeToolTip": "postsys\\model\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "BillsExport.cs",
+              "DocumentMoniker": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\services\\BillsExport.cs",
+              "RelativeDocumentMoniker": "postsys\\services\\BillsExport.cs",
+              "ToolTip": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\services\\BillsExport.cs",
+              "RelativeToolTip": "postsys\\services\\BillsExport.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBoAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T22:22:01.235Z",
+              "WhenOpened": "2025-06-28T00:15:12.614Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Sales.cs",
-              "DocumentMoniker": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\Sales.cs",
-              "RelativeDocumentMoniker": "postsys\\Forms\\Sales.cs",
-              "ToolTip": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\Sales.cs",
-              "RelativeToolTip": "postsys\\Forms\\Sales.cs",
-              "ViewState": "AgIAAJMAAAAAAAAAAAAowAwAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "BillsModel.cs",
+              "DocumentMoniker": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\model\\BillsModel.cs",
+              "RelativeDocumentMoniker": "postsys\\model\\BillsModel.cs",
+              "ToolTip": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\model\\BillsModel.cs",
+              "RelativeToolTip": "postsys\\model\\BillsModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T21:51:04.31Z",
+              "WhenOpened": "2025-06-27T23:40:13.105Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Bills.cs",
+              "DocumentMoniker": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\Bills.cs",
+              "RelativeDocumentMoniker": "postsys\\Forms\\Bills.cs",
+              "ToolTip": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\Bills.cs",
+              "RelativeToolTip": "postsys\\Forms\\Bills.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAowFsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T23:26:36.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Sales.cs",
+              "DocumentMoniker": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\Sales.cs",
+              "RelativeDocumentMoniker": "postsys\\Forms\\Sales.cs",
+              "ToolTip": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\Sales.cs",
+              "RelativeToolTip": "postsys\\Forms\\Sales.cs",
+              "ViewState": "AgIAALIAAAAAAAAAAAAkwLwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T23:53:28.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Bills.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\Bills.cs",
+              "RelativeDocumentMoniker": "postsys\\Forms\\Bills.cs",
+              "ToolTip": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\Bills.cs [Dise\u00F1o]",
+              "RelativeToolTip": "postsys\\Forms\\Bills.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T22:07:50.144Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Sales.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\Sales.cs",
               "RelativeDocumentMoniker": "postsys\\Forms\\Sales.cs",
               "ToolTip": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\Sales.cs [Dise\u00F1o]",
               "RelativeToolTip": "postsys\\Forms\\Sales.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T21:47:38.853Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Inventory.cs",
-              "DocumentMoniker": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\Inventory.cs",
-              "RelativeDocumentMoniker": "postsys\\Forms\\Inventory.cs",
-              "ToolTip": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\Inventory.cs",
-              "RelativeToolTip": "postsys\\Forms\\Inventory.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACoAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T02:18:09.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Inventory.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\Inventory.cs",
-              "RelativeDocumentMoniker": "postsys\\Forms\\Inventory.cs",
-              "ToolTip": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\Inventory.cs [Dise\u00F1o]",
-              "RelativeToolTip": "postsys\\Forms\\Inventory.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T02:05:45.769Z",
+              "WhenOpened": "2025-06-26T23:52:59.245Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Person.cs",
-              "DocumentMoniker": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\model\\Person.cs",
-              "RelativeDocumentMoniker": "postsys\\model\\Person.cs",
-              "ToolTip": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\model\\Person.cs",
-              "RelativeToolTip": "postsys\\model\\Person.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\Login.cs",
+              "RelativeDocumentMoniker": "postsys\\Forms\\Login.cs",
+              "ToolTip": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\Login.cs",
+              "RelativeToolTip": "postsys\\Forms\\Login.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwDEAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T01:47:56.173Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClientForm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\ClientForm.cs",
-              "RelativeDocumentMoniker": "postsys\\Forms\\ClientForm.cs",
-              "ToolTip": "C:\\Users\\jorda\\Documents\\visual\\postsys\\postsys\\Forms\\ClientForm.cs [Dise\u00F1o]",
-              "RelativeToolTip": "postsys\\Forms\\ClientForm.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T01:42:32.317Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-06-26T22:48:24.103Z"
             }
           ]
         }
