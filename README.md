@@ -52,25 +52,25 @@ postsys/
 ## 📷 Capturas de Pantalla
 
 ### 🔐 Inicio de Sesión
-![Login](./images/login.png)
+![Login](/postsys/images/login.png)
 
 ### 📝 Registro de Usuario
-![Register](./images/register.png)
+![Register](/postsys/images/register.png)
 
 ### 🏠 Menú Principal
-![Dashboard](./images/menu.png)
+![Dashboard](/postsys/images/menu.png)
 
 ### 🛒 Módulo de Ventas
-![Ventas](./images/ventas.png)
+![Ventas](/postsys/images/ventas.png)
 
 ### 📦 Módulo de Inventario
-![Inventario](./images/inventario.png)
+![Inventario](/postsys/images/inventario.png)
 
 ### 👥 Módulo de Clientes
-![Clientes](./images/clientes.png)
+![Clientes](/postsys/images/clientes.png)
 
 ### 👤 Módulo de Usuarios
-![Usuarios](./images/usuarios.png)
+![Usuarios](/postsys/images/usuarios.png)
 
 ---
 
@@ -96,7 +96,7 @@ El sistema se conecta al backend REST desarrollado con FastAPI para:
 
 ## 📫 Contacto
 
-Si tenés dudas o sugerencias, podés escribirme a [tu-email@ejemplo.com](mailto:tu-email@ejemplo.com) o crear un Issue en el repositorio.
+Si tenés dudas o sugerencias, podés escribirme a [jordanlaguna10@gmail.com](jordanlaguna10@gmail.com) o crear un Issue en el repositorio.
 
 ---
 
