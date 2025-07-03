@@ -46,14 +46,11 @@
             btnMaximize = new FontAwesome.Sharp.IconButton();
             btnClose = new FontAwesome.Sharp.IconButton();
             panelDesktop = new Panel();
-            pictureBox2 = new PictureBox();
             notifyIcon1 = new NotifyIcon(components);
             panelMenu.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelTitleBar.SuspendLayout();
-            panelDesktop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panelMenu
@@ -338,22 +335,11 @@
             // panelDesktop
             // 
             panelDesktop.BackColor = Color.WhiteSmoke;
-            panelDesktop.Controls.Add(pictureBox2);
             panelDesktop.Dock = DockStyle.Fill;
             panelDesktop.Location = new Point(230, 60);
             panelDesktop.Name = "panelDesktop";
             panelDesktop.Size = new Size(940, 601);
             panelDesktop.TabIndex = 2;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(388, 64);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(164, 251);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 1;
-            pictureBox2.TabStop = false;
             // 
             // notifyIcon1
             // 
@@ -377,8 +363,6 @@
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelTitleBar.ResumeLayout(false);
-            panelDesktop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -401,6 +385,5 @@
         private FontAwesome.Sharp.IconButton btnMaximize;
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconButton bntMinimize;
-        private PictureBox pictureBox2;
     }
 }
