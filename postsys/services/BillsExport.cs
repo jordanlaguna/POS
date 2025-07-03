@@ -20,7 +20,7 @@ public class BillsExport
         doc.Add(new Paragraph($"Fecha: {bills.Date_now:dd/MM/yyyy HH:mm:ss}\n\n"));
 
         // header of the bill
-        doc.Add(new Paragraph("Detalle de productos:\n", FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12)));
+        doc.Add(new Paragraph("---------------- Detalle de productos:----------------\n", FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12)));
 
         foreach (var p in bills.Product)
         {

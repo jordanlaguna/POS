@@ -5,14 +5,16 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.DataFormats;
-using System.Net.Http;
-using System.Text.Json;
 using postsys;
 using postsys.Forms;
+using postsys.model;
+using postsys.services;
+using static System.Windows.Forms.DataFormats;
 
 namespace Dashboard
 {
@@ -44,25 +46,32 @@ namespace Dashboard
 
                 if (response.IsSuccessStatusCode)
                 {
+                    var loginResult = JsonSerializer.Deserialize<LoginResponse>(responseBody, new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+
+                    // save the access token and user ID in the AuthSession
+                    AuthSession.AccessToken = loginResult.access_token;
+                    AuthSession.UserId = loginResult.user_id;
+
                     MessageBox.Show("Inicio de sesión exitoso", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     Form1 v = new Form1();
                     v.Show();
                     this.Hide();
-
                 }
                 else
                 {
-                    MessageBox.Show("Usuario no existe ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Credenciales incorrectas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception)
             {
-
                 MessageBox.Show("Error al conectar con el servidor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
+
 
 
         private void btnMinimized_Click(object sender, EventArgs e)

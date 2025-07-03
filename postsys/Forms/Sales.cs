@@ -19,6 +19,16 @@ namespace postsys.Forms
             // Ascign event handlers
             textCode.KeyDown += txtBarCodeSearch;
             textQuantity.KeyDown += txtQuantity_KeyDown;
+            this.KeyPreview = true;
+            this.KeyDown += Sales_KeyDown;
+            // add columns to the DataGridView
+            if (!tableSale.Columns.Contains("id_product"))
+            {
+                tableSale.Columns.Add("id_product", "ID");
+                tableSale.Columns["id_product"].Visible = false;
+            }
+
+
         }
 
         private async void txtBarCodeSearch(object sender, KeyEventArgs e)
@@ -139,7 +149,8 @@ namespace postsys.Forms
                 product.price.ToString("0.00"),
                 qty.ToString(),
                 total.ToString("0.00"),
-                product.stock
+                product.stock,
+                product.id_product
             );
         }
         private void CalculateTotalNew()
@@ -182,18 +193,30 @@ namespace postsys.Forms
             List<BillsProduct> products = new List<BillsProduct>();
             foreach (DataGridViewRow row in tableSale.Rows)
             {
-                if (row.Cells["barCode"].Value != null)
+                if (row.Cells["barcode"].Value != null)
                 {
                     products.Add(new BillsProduct
                     {
+                        id_product = int.Parse(row.Cells["id_product"].Value.ToString()), 
                         name = row.Cells["Descripcion"].Value.ToString(),
                         quantity = int.Parse(row.Cells["quantity"].Value.ToString()),
                         price = decimal.Parse(row.Cells["price"].Value.ToString())
                     });
                 }
-
             }
             return products;
         }
+
+
+        private void Sales_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                // Simular clic en el botón "Cobrar"
+                btnCollect_Click(null, null);
+                e.Handled = true;
+            }
+        }
+
     }
 }

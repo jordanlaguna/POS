@@ -101,14 +101,19 @@ namespace postsys.Forms
             {
                 sale_number = sale_number,
                 client_id = 1,
-                user_id = 1,  
+                user_id = 1,
                 total = subtotal + tax,
                 subtotal = subtotal,
                 tax = tax,
                 payment_method = payment_method,
                 cash_received = cash_received,
                 change_given = change_given,
-                created_at = created_at
+                created_at = created_at,
+                products = products.Select(p => new
+                {
+                    id_product = p.id_product, 
+                    stock = p.quantity
+                }).ToList()
             };
 
             var json = JsonSerializer.Serialize(sale);
@@ -134,6 +139,7 @@ namespace postsys.Forms
                 MessageBox.Show("Error al conectar con el servidor: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
         private void CalculateTotal()
