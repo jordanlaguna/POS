@@ -35,7 +35,7 @@
             btnUserForm = new FontAwesome.Sharp.IconButton();
             btnClientForm = new FontAwesome.Sharp.IconButton();
             btnInventory = new FontAwesome.Sharp.IconButton();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
+            btnInvoice = new FontAwesome.Sharp.IconButton();
             btnSales = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             panel1 = new Panel();
@@ -60,7 +60,7 @@
             panelMenu.Controls.Add(btnUserForm);
             panelMenu.Controls.Add(btnClientForm);
             panelMenu.Controls.Add(btnInventory);
-            panelMenu.Controls.Add(iconButton4);
+            panelMenu.Controls.Add(btnInvoice);
             panelMenu.Controls.Add(btnSales);
             panelMenu.Controls.Add(iconButton2);
             panelMenu.Controls.Add(panel1);
@@ -166,28 +166,29 @@
             btnInventory.UseVisualStyleBackColor = true;
             btnInventory.Click += iconInventory_Click;
             // 
-            // iconButton4
+            // btnInvoice
             // 
-            iconButton4.Dock = DockStyle.Top;
-            iconButton4.FlatAppearance.BorderSize = 0;
-            iconButton4.FlatStyle = FlatStyle.Flat;
-            iconButton4.Font = new Font("Times New Roman", 13.8F);
-            iconButton4.ForeColor = Color.White;
-            iconButton4.IconChar = FontAwesome.Sharp.IconChar.Inbox;
-            iconButton4.IconColor = Color.FromArgb(11, 47, 75);
-            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.IconSize = 40;
-            iconButton4.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton4.Location = new Point(0, 214);
-            iconButton4.Name = "iconButton4";
-            iconButton4.Padding = new Padding(10, 0, 0, 0);
-            iconButton4.Size = new Size(230, 45);
-            iconButton4.TabIndex = 3;
-            iconButton4.Tag = "Facturación";
-            iconButton4.Text = "iconButton4";
-            iconButton4.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton4.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton4.UseVisualStyleBackColor = true;
+            btnInvoice.Dock = DockStyle.Top;
+            btnInvoice.FlatAppearance.BorderSize = 0;
+            btnInvoice.FlatStyle = FlatStyle.Flat;
+            btnInvoice.Font = new Font("Times New Roman", 13.8F);
+            btnInvoice.ForeColor = Color.White;
+            btnInvoice.IconChar = FontAwesome.Sharp.IconChar.Inbox;
+            btnInvoice.IconColor = Color.FromArgb(11, 47, 75);
+            btnInvoice.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnInvoice.IconSize = 40;
+            btnInvoice.ImageAlign = ContentAlignment.MiddleLeft;
+            btnInvoice.Location = new Point(0, 214);
+            btnInvoice.Name = "btnInvoice";
+            btnInvoice.Padding = new Padding(10, 0, 0, 0);
+            btnInvoice.Size = new Size(230, 45);
+            btnInvoice.TabIndex = 3;
+            btnInvoice.Tag = "Facturación";
+            btnInvoice.Text = "iconButton4";
+            btnInvoice.TextAlign = ContentAlignment.MiddleLeft;
+            btnInvoice.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnInvoice.UseVisualStyleBackColor = true;
+            btnInvoice.Click += btnInvoice_Click;
             // 
             // btnSales
             // 
@@ -380,7 +381,7 @@
         private FontAwesome.Sharp.IconButton btnUserForm;
         private FontAwesome.Sharp.IconButton btnClientForm;
         private FontAwesome.Sharp.IconButton btnInventory;
-        private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton btnInvoice;
         private FontAwesome.Sharp.IconButton btnSales;
         private FontAwesome.Sharp.IconButton btnMaximize;
         private FontAwesome.Sharp.IconButton btnClose;

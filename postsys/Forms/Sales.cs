@@ -7,10 +7,12 @@ using postsys.model;
 
 namespace postsys.Forms
 {
+
     public partial class Sales : Form
     {
         private Product? currentProduct;
         decimal IVA = 0; // IVA del 13%
+        private List<Product> searchResults = new List<Product>();
 
         public Sales()
         {
@@ -21,13 +23,15 @@ namespace postsys.Forms
             textQuantity.KeyDown += txtQuantity_KeyDown;
             this.KeyPreview = true;
             this.KeyDown += Sales_KeyDown;
+            textCode.TextChanged += async (s, e) => await TextCode_TextChangedAsync(s, e);
+            listBoxDynamic.Visible = false; // Hide the dynamic list box initially
+            listBoxDynamic.Click += ListBoxDynamic_Click; // Add click event handler for the dynamic list box
             // add columns to the DataGridView
             if (!tableSale.Columns.Contains("id_product"))
             {
                 tableSale.Columns.Add("id_product", "ID");
                 tableSale.Columns["id_product"].Visible = false;
             }
-
 
         }
 
@@ -212,11 +216,67 @@ namespace postsys.Forms
         {
             if (e.KeyCode == Keys.F1)
             {
-                // Simular clic en el botón "Cobrar"
                 btnCollect_Click(null, null);
                 e.Handled = true;
             }
         }
+
+        private async Task TextCode_TextChangedAsync(object sender, EventArgs e)
+        {
+            string searchText = textCode.Text.Trim();
+            if (string.IsNullOrEmpty(searchText))
+            {
+                listBoxDynamic.Visible = false;
+                return;
+            }
+
+            using var client = new HttpClient();
+            try
+            {
+                var response = await client.GetAsync($"http://localhost:8000/products/search/{searchText}");
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = await response.Content.ReadAsStringAsync();
+                    searchResults = JsonSerializer.Deserialize<List<Product>>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+
+                    if (searchResults != null && searchResults.Count > 0)
+                    {
+                        listBoxDynamic.Items.Clear();
+                        foreach (var product in searchResults)
+                        {
+                            listBoxDynamic.Items.Add($"{product.name}");
+                        }
+                        listBoxDynamic.Visible = true;
+                    }
+                    else
+                    {
+                        listBoxDynamic.Visible = false;
+                    }
+                }
+                else
+                {
+                    listBoxDynamic.Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar productos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                listBoxDynamic.Visible = false;
+            }
+        }
+
+        private async void ListBoxDynamic_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = listBoxDynamic.SelectedIndex;
+            if (selectedIndex >= 0 && selectedIndex < searchResults.Count)
+            {
+                var selectedProduct = searchResults[selectedIndex];
+                textCode.Text = selectedProduct.name;
+                listBoxDynamic.Visible = false;
+                await SearchProductByBarcodeAsync(selectedProduct.name);
+            }
+        }
+
 
     }
 }

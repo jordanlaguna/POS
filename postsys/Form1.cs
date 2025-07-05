@@ -228,7 +228,11 @@ namespace postsys
             }
         }
 
-    
+        private void btnInvoice_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnInvoice);
+            OpenForm(new Invoice());
+        }
     }
 
     public static class ColorAnimationHelper

@@ -36,6 +36,7 @@
             panel1 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel2 = new Panel();
+            listBoxDynamic = new ListBox();
             textCode = new TextBox();
             label3 = new Label();
             panel3 = new Panel();
@@ -110,7 +111,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(954, 84);
+            panel1.Size = new Size(954, 109);
             panel1.TabIndex = 0;
             panel1.UseWaitCursor = true;
             // 
@@ -126,27 +127,40 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(954, 84);
+            tableLayoutPanel1.Size = new Size(954, 109);
             tableLayoutPanel1.TabIndex = 0;
             tableLayoutPanel1.UseWaitCursor = true;
             // 
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(listBoxDynamic);
             panel2.Controls.Add(textCode);
             panel2.Controls.Add(label3);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(702, 78);
+            panel2.Size = new Size(702, 103);
             panel2.TabIndex = 0;
             panel2.UseWaitCursor = true;
+            // 
+            // listBoxDynamic
+            // 
+            listBoxDynamic.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            listBoxDynamic.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listBoxDynamic.FormattingEnabled = true;
+            listBoxDynamic.ItemHeight = 26;
+            listBoxDynamic.Location = new Point(255, 45);
+            listBoxDynamic.Name = "listBoxDynamic";
+            listBoxDynamic.Size = new Size(411, 56);
+            listBoxDynamic.TabIndex = 21;
+            listBoxDynamic.UseWaitCursor = true;
             // 
             // textCode
             // 
             textCode.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textCode.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textCode.Location = new Point(254, 22);
+            textCode.Location = new Point(254, 9);
             textCode.Name = "textCode";
             textCode.PlaceholderText = "Ingrese el nombre";
             textCode.Size = new Size(413, 34);
@@ -161,7 +175,7 @@
             label3.BackColor = Color.Transparent;
             label3.FlatStyle = FlatStyle.Flat;
             label3.Font = new Font("Times New Roman", 16F);
-            label3.Location = new Point(3, 23);
+            label3.Location = new Point(3, 10);
             label3.Name = "label3";
             label3.Size = new Size(248, 31);
             label3.TabIndex = 19;
@@ -175,7 +189,7 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(711, 3);
             panel3.Name = "panel3";
-            panel3.Size = new Size(240, 78);
+            panel3.Size = new Size(240, 103);
             panel3.TabIndex = 1;
             panel3.UseWaitCursor = true;
             // 
@@ -187,9 +201,9 @@
             button1.FlatAppearance.BorderColor = Color.Green;
             button1.Font = new Font("Times New Roman", 12F);
             button1.ForeColor = Color.Black;
-            button1.Location = new Point(23, 3);
+            button1.Location = new Point(17, 6);
             button1.Name = "button1";
-            button1.Size = new Size(199, 70);
+            button1.Size = new Size(214, 90);
             button1.TabIndex = 13;
             button1.Text = "Enter - Agregar";
             button1.UseVisualStyleBackColor = false;
@@ -199,7 +213,7 @@
             // 
             panel4.Controls.Add(tableLayoutPanel2);
             panel4.Dock = DockStyle.Top;
-            panel4.Location = new Point(0, 84);
+            panel4.Location = new Point(0, 109);
             panel4.Name = "panel4";
             panel4.Size = new Size(954, 57);
             panel4.TabIndex = 1;
@@ -555,10 +569,10 @@
             // 
             panel9.Controls.Add(tableSale);
             panel9.Dock = DockStyle.Fill;
-            panel9.Location = new Point(0, 141);
+            panel9.Location = new Point(0, 166);
             panel9.Name = "panel9";
             panel9.Padding = new Padding(3, 0, 2, 0);
-            panel9.Size = new Size(954, 395);
+            panel9.Size = new Size(954, 370);
             panel9.TabIndex = 4;
             panel9.UseWaitCursor = true;
             // 
@@ -607,7 +621,7 @@
             tableSale.RowHeadersVisible = false;
             tableSale.RowHeadersWidth = 51;
             tableSale.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            tableSale.Size = new Size(949, 395);
+            tableSale.Size = new Size(949, 370);
             tableSale.TabIndex = 4;
             tableSale.UseWaitCursor = true;
             // 
@@ -751,5 +765,6 @@
         private TableLayoutPanel tableLayoutPanel4;
         private Panel panel12;
         private Panel panel13;
+        private ListBox listBoxDynamic;
     }
 }

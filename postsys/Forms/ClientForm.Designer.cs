@@ -34,6 +34,7 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel2 = new Panel();
+            textBoxID = new TextBox();
             textEmail = new TextBox();
             pictureBox9 = new PictureBox();
             label9 = new Label();
@@ -64,7 +65,7 @@
             panel3 = new Panel();
             btnAgregar = new FontAwesome.Sharp.IconButton();
             panel4 = new Panel();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
+            btnUpdateClient = new FontAwesome.Sharp.IconButton();
             panel12 = new Panel();
             iconButton3 = new FontAwesome.Sharp.IconButton();
             panel8 = new Panel();
@@ -76,6 +77,7 @@
             panel10 = new Panel();
             panel11 = new Panel();
             tableClients = new DataGridView();
+            ColumnIdClient = new DataGridViewTextBoxColumn();
             ColumnIdentification = new DataGridViewTextBoxColumn();
             ColumnName = new DataGridViewTextBoxColumn();
             ColumnLastName = new DataGridViewTextBoxColumn();
@@ -136,6 +138,7 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(textBoxID);
             panel2.Controls.Add(textEmail);
             panel2.Controls.Add(pictureBox9);
             panel2.Controls.Add(label9);
@@ -147,6 +150,22 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(231, 227);
             panel2.TabIndex = 0;
+            // 
+            // textBoxID
+            // 
+            textBoxID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBoxID.BackColor = Color.White;
+            textBoxID.BorderStyle = BorderStyle.None;
+            textBoxID.Font = new Font("Times New Roman", 13F);
+            textBoxID.ForeColor = Color.Black;
+            textBoxID.Location = new Point(185, 2);
+            textBoxID.Margin = new Padding(2);
+            textBoxID.Multiline = true;
+            textBoxID.Name = "textBoxID";
+            textBoxID.PlaceholderText = "Digite la cédula";
+            textBoxID.Size = new Size(33, 27);
+            textBoxID.TabIndex = 34;
+            textBoxID.Visible = false;
             // 
             // textEmail
             // 
@@ -543,34 +562,35 @@
             // panel4
             // 
             panel4.BackColor = Color.White;
-            panel4.Controls.Add(iconButton1);
+            panel4.Controls.Add(btnUpdateClient);
             panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(320, 3);
             panel4.Name = "panel4";
             panel4.Size = new Size(311, 72);
             panel4.TabIndex = 1;
             // 
-            // iconButton1
+            // btnUpdateClient
             // 
-            iconButton1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            iconButton1.BackColor = Color.Yellow;
-            iconButton1.Cursor = Cursors.Hand;
-            iconButton1.FlatAppearance.BorderColor = Color.Yellow;
-            iconButton1.FlatAppearance.BorderSize = 2;
-            iconButton1.Font = new Font("Times New Roman", 12F);
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            iconButton1.IconColor = Color.FromArgb(11, 47, 75);
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.Location = new Point(74, 10);
-            iconButton1.Name = "iconButton1";
-            iconButton1.RightToLeft = RightToLeft.No;
-            iconButton1.Size = new Size(172, 50);
-            iconButton1.TabIndex = 10;
-            iconButton1.Text = "Actualizar";
-            iconButton1.TextAlign = ContentAlignment.MiddleRight;
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = false;
-            iconButton1.UseWaitCursor = true;
+            btnUpdateClient.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnUpdateClient.BackColor = Color.Yellow;
+            btnUpdateClient.Cursor = Cursors.Hand;
+            btnUpdateClient.FlatAppearance.BorderColor = Color.Yellow;
+            btnUpdateClient.FlatAppearance.BorderSize = 2;
+            btnUpdateClient.Font = new Font("Times New Roman", 12F);
+            btnUpdateClient.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            btnUpdateClient.IconColor = Color.FromArgb(11, 47, 75);
+            btnUpdateClient.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnUpdateClient.Location = new Point(74, 10);
+            btnUpdateClient.Name = "btnUpdateClient";
+            btnUpdateClient.RightToLeft = RightToLeft.No;
+            btnUpdateClient.Size = new Size(172, 50);
+            btnUpdateClient.TabIndex = 10;
+            btnUpdateClient.Text = "Actualizar";
+            btnUpdateClient.TextAlign = ContentAlignment.MiddleRight;
+            btnUpdateClient.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnUpdateClient.UseVisualStyleBackColor = false;
+            btnUpdateClient.UseWaitCursor = true;
+            btnUpdateClient.Click += btnUpdateClient_Click;
             // 
             // panel12
             // 
@@ -712,13 +732,13 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             tableClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             tableClients.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tableClients.Columns.AddRange(new DataGridViewColumn[] { ColumnIdentification, ColumnName, ColumnLastName, ColumnsecondName, ColumnEmail, ColumnTelephone, ColumnAddress, ColumnDate });
+            tableClients.Columns.AddRange(new DataGridViewColumn[] { ColumnIdClient, ColumnIdentification, ColumnName, ColumnLastName, ColumnsecondName, ColumnEmail, ColumnTelephone, ColumnAddress, ColumnDate });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(26, 211, 238);
             dataGridViewCellStyle2.Font = new Font("Times New Roman", 12F);
             dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = Color.Transparent;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             tableClients.DefaultCellStyle = dataGridViewCellStyle2;
             tableClients.Dock = DockStyle.Fill;
@@ -741,6 +761,16 @@
             tableClients.RowTemplate.Height = 33;
             tableClients.Size = new Size(948, 252);
             tableClients.TabIndex = 8;
+            // 
+            // ColumnIdClient
+            // 
+            ColumnIdClient.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            ColumnIdClient.DataPropertyName = "id_client";
+            ColumnIdClient.HeaderText = "ID";
+            ColumnIdClient.MinimumWidth = 6;
+            ColumnIdClient.Name = "ColumnIdClient";
+            ColumnIdClient.ReadOnly = true;
+            ColumnIdClient.Visible = false;
             // 
             // ColumnIdentification
             // 
@@ -920,11 +950,13 @@
         private DataGridView tableClients;
         private Panel panel1;
         private Panel panel4;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnUpdateClient;
         private Panel panel12;
         private TextBox textEmail;
         private PictureBox pictureBox9;
         private Label label9;
+        private TextBox textBoxID;
+        private DataGridViewTextBoxColumn ColumnIdClient;
         private DataGridViewTextBoxColumn ColumnIdentification;
         private DataGridViewTextBoxColumn ColumnName;
         private DataGridViewTextBoxColumn ColumnLastName;

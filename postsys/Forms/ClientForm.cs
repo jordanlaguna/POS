@@ -20,8 +20,12 @@ namespace Dashboard
             InitializeComponent();
             LoadDataInTableUsers();
             btnAgregar.Paint += btnAgregar_Paint;
+            tableClients.CellClick += tableClients_CellClick;
 
         }
+
+     
+
         private async Task<List<Client>> GetAllInformationClients()
         {
             using var client = new HttpClient();
@@ -52,8 +56,6 @@ namespace Dashboard
             var clients = await GetAllInformationClients();
             tableClients.DataSource = null;
             tableClients.DataSource = clients;
-            tableClients.Columns["id_client"].Visible = false;
-
 
         }
 
@@ -136,5 +138,66 @@ namespace Dashboard
                 Color.DarkGreen, 3, ButtonBorderStyle.Solid);
         }
 
+
+    
+
+        private async Task UpdateClient()
+        {
+            int id_client = int.Parse(textBoxID.Text);
+            Client clients = new Client
+            {
+                identification = textIdentification.Text.Trim(),
+                name = textName.Text.Trim(),
+                last_name = textLastName.Text.Trim(),
+                second_name = textSecondName.Text.Trim(),
+                email = textEmail.Text.Trim(),
+                telephone = int.Parse(textTelephone.Text.Trim()),
+                address = textAddress.Text.Trim(),
+                register_date = dateTimeRegister.Value
+            };
+            var json = JsonSerializer.Serialize(clients);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            using var client = new HttpClient();
+
+            try
+            {
+                var response = await client.PutAsync($"http://localhost:8000/clients/update_client/{id_client}", content);
+                var responseBody = await response.Content.ReadAsStringAsync();
+                if (response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Cliente actualizado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDataInTableUsers();
+                }
+                else
+                {
+                    MessageBox.Show("Error al actualizar cliente: " + responseBody, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Error al conectar con el servidor: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+        private async void btnUpdateClient_Click(object sender, EventArgs e)
+        {
+            await UpdateClient();
+        }
+
+        private void tableClients_CellClick(object? sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.RowIndex < tableClients.Rows.Count)
+            {
+                DataGridViewRow row = tableClients.Rows[e.RowIndex];
+                textBoxID.Text = row.Cells["ColumnIdClient"].Value.ToString();
+                textIdentification.Text = row.Cells["ColumnIdentification"].Value.ToString();
+                textName.Text = row.Cells["ColumnName"].Value.ToString();
+                textLastName.Text = row.Cells["ColumnLastName"].Value.ToString();
+                textSecondName.Text = row.Cells["ColumnSecondName"].Value.ToString();
+                textEmail.Text = row.Cells["ColumnEmail"].Value.ToString();
+                textTelephone.Text = row.Cells["ColumnTelephone"].Value.ToString();
+                textAddress.Text = row.Cells["ColumnAddress"].Value.ToString();
+                dateTimeRegister.Value = Convert.ToDateTime(row.Cells["ColumnDate"].Value);
+            }
+        }
     }
 }

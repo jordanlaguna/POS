@@ -33,35 +33,33 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel2 = new Panel();
-            textBox6 = new TextBox();
+            textBoxId = new TextBox();
+            textBoxTelephone = new TextBox();
             pictureBox5 = new PictureBox();
-            textBox5 = new TextBox();
+            textBoxIdentification = new TextBox();
             pictureBox4 = new PictureBox();
             label1 = new Label();
             label5 = new Label();
             panel5 = new Panel();
-            textBox4 = new TextBox();
+            textBoxName = new TextBox();
             pictureBox3 = new PictureBox();
-            dateTimePicker1 = new DateTimePicker();
+            dateTimePickerBirthDate = new DateTimePicker();
             label6 = new Label();
             label2 = new Label();
             panel6 = new Panel();
-            textBox1 = new TextBox();
+            textBoxEmail = new TextBox();
             pictureBox6 = new PictureBox();
             label3 = new Label();
             txtLastName = new TextBox();
             pictureBox2 = new PictureBox();
             label7 = new Label();
             panel7 = new Panel();
-            textBox3 = new TextBox();
-            pictureBox7 = new PictureBox();
-            textBox2 = new TextBox();
+            textBoxSecondName = new TextBox();
             pictureBox1 = new PictureBox();
             label4 = new Label();
-            label8 = new Label();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel3 = new Panel();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
+            btnUpdate = new FontAwesome.Sharp.IconButton();
             panel4 = new Panel();
             iconButton3 = new FontAwesome.Sharp.IconButton();
             panel8 = new Panel();
@@ -91,7 +89,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tableLayoutPanel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -131,9 +128,10 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Controls.Add(textBox6);
+            panel2.Controls.Add(textBoxId);
+            panel2.Controls.Add(textBoxTelephone);
             panel2.Controls.Add(pictureBox5);
-            panel2.Controls.Add(textBox5);
+            panel2.Controls.Add(textBoxIdentification);
             panel2.Controls.Add(pictureBox4);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(label5);
@@ -143,20 +141,36 @@
             panel2.Size = new Size(231, 227);
             panel2.TabIndex = 0;
             // 
-            // textBox6
+            // textBoxId
             // 
-            textBox6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox6.BackColor = Color.White;
-            textBox6.BorderStyle = BorderStyle.None;
-            textBox6.Font = new Font("Times New Roman", 13F);
-            textBox6.ForeColor = Color.Black;
-            textBox6.Location = new Point(12, 174);
-            textBox6.Margin = new Padding(2);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.PlaceholderText = "Digite su teléfono";
-            textBox6.Size = new Size(206, 26);
-            textBox6.TabIndex = 2;
+            textBoxId.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBoxId.BackColor = Color.White;
+            textBoxId.BorderStyle = BorderStyle.None;
+            textBoxId.Font = new Font("Times New Roman", 13F);
+            textBoxId.ForeColor = Color.Black;
+            textBoxId.Location = new Point(195, 2);
+            textBoxId.Margin = new Padding(2);
+            textBoxId.Multiline = true;
+            textBoxId.Name = "textBoxId";
+            textBoxId.PlaceholderText = "Digite su cédula";
+            textBoxId.Size = new Size(34, 26);
+            textBoxId.TabIndex = 33;
+            textBoxId.Visible = false;
+            // 
+            // textBoxTelephone
+            // 
+            textBoxTelephone.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBoxTelephone.BackColor = Color.White;
+            textBoxTelephone.BorderStyle = BorderStyle.None;
+            textBoxTelephone.Font = new Font("Times New Roman", 13F);
+            textBoxTelephone.ForeColor = Color.Black;
+            textBoxTelephone.Location = new Point(10, 174);
+            textBoxTelephone.Margin = new Padding(2);
+            textBoxTelephone.Multiline = true;
+            textBoxTelephone.Name = "textBoxTelephone";
+            textBoxTelephone.PlaceholderText = "Digite su teléfono";
+            textBoxTelephone.Size = new Size(206, 26);
+            textBoxTelephone.TabIndex = 2;
             // 
             // pictureBox5
             // 
@@ -170,20 +184,20 @@
             pictureBox5.TabIndex = 32;
             pictureBox5.TabStop = false;
             // 
-            // textBox5
+            // textBoxIdentification
             // 
-            textBox5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox5.BackColor = Color.White;
-            textBox5.BorderStyle = BorderStyle.None;
-            textBox5.Font = new Font("Times New Roman", 13F);
-            textBox5.ForeColor = Color.Black;
-            textBox5.Location = new Point(12, 54);
-            textBox5.Margin = new Padding(2);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Digite su cédula";
-            textBox5.Size = new Size(206, 26);
-            textBox5.TabIndex = 1;
+            textBoxIdentification.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBoxIdentification.BackColor = Color.White;
+            textBoxIdentification.BorderStyle = BorderStyle.None;
+            textBoxIdentification.Font = new Font("Times New Roman", 13F);
+            textBoxIdentification.ForeColor = Color.Black;
+            textBoxIdentification.Location = new Point(12, 54);
+            textBoxIdentification.Margin = new Padding(2);
+            textBoxIdentification.Multiline = true;
+            textBoxIdentification.Name = "textBoxIdentification";
+            textBoxIdentification.PlaceholderText = "Digite su cédula";
+            textBoxIdentification.Size = new Size(206, 26);
+            textBoxIdentification.TabIndex = 1;
             // 
             // pictureBox4
             // 
@@ -224,9 +238,9 @@
             // panel5
             // 
             panel5.BackColor = Color.White;
-            panel5.Controls.Add(textBox4);
+            panel5.Controls.Add(textBoxName);
             panel5.Controls.Add(pictureBox3);
-            panel5.Controls.Add(dateTimePicker1);
+            panel5.Controls.Add(dateTimePickerBirthDate);
             panel5.Controls.Add(label6);
             panel5.Controls.Add(label2);
             panel5.Dock = DockStyle.Fill;
@@ -235,20 +249,20 @@
             panel5.Size = new Size(231, 227);
             panel5.TabIndex = 1;
             // 
-            // textBox4
+            // textBoxName
             // 
-            textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox4.BackColor = Color.White;
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Font = new Font("Times New Roman", 13F);
-            textBox4.ForeColor = Color.Black;
-            textBox4.Location = new Point(14, 54);
-            textBox4.Margin = new Padding(2);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Digite su nombre";
-            textBox4.Size = new Size(203, 26);
-            textBox4.TabIndex = 3;
+            textBoxName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBoxName.BackColor = Color.White;
+            textBoxName.BorderStyle = BorderStyle.None;
+            textBoxName.Font = new Font("Times New Roman", 13F);
+            textBoxName.ForeColor = Color.Black;
+            textBoxName.Location = new Point(14, 54);
+            textBoxName.Margin = new Padding(2);
+            textBoxName.Multiline = true;
+            textBoxName.Name = "textBoxName";
+            textBoxName.PlaceholderText = "Digite su nombre";
+            textBoxName.Size = new Size(203, 26);
+            textBoxName.TabIndex = 3;
             // 
             // pictureBox3
             // 
@@ -262,17 +276,17 @@
             pictureBox3.TabIndex = 28;
             pictureBox3.TabStop = false;
             // 
-            // dateTimePicker1
+            // dateTimePickerBirthDate
             // 
-            dateTimePicker1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            dateTimePicker1.Font = new Font("Verdana", 12F);
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(12, 179);
-            dateTimePicker1.Margin = new Padding(2);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.RightToLeft = RightToLeft.No;
-            dateTimePicker1.Size = new Size(206, 32);
-            dateTimePicker1.TabIndex = 4;
+            dateTimePickerBirthDate.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dateTimePickerBirthDate.Font = new Font("Verdana", 12F);
+            dateTimePickerBirthDate.Format = DateTimePickerFormat.Short;
+            dateTimePickerBirthDate.Location = new Point(12, 179);
+            dateTimePickerBirthDate.Margin = new Padding(2);
+            dateTimePickerBirthDate.Name = "dateTimePickerBirthDate";
+            dateTimePickerBirthDate.RightToLeft = RightToLeft.No;
+            dateTimePickerBirthDate.Size = new Size(206, 32);
+            dateTimePickerBirthDate.TabIndex = 4;
             // 
             // label6
             // 
@@ -301,7 +315,7 @@
             // panel6
             // 
             panel6.BackColor = Color.White;
-            panel6.Controls.Add(textBox1);
+            panel6.Controls.Add(textBoxEmail);
             panel6.Controls.Add(pictureBox6);
             panel6.Controls.Add(label3);
             panel6.Controls.Add(txtLastName);
@@ -313,20 +327,20 @@
             panel6.Size = new Size(231, 227);
             panel6.TabIndex = 2;
             // 
-            // textBox1
+            // textBoxEmail
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox1.BackColor = Color.White;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Times New Roman", 13F);
-            textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(16, 174);
-            textBox1.Margin = new Padding(2);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Digite su correo";
-            textBox1.Size = new Size(203, 26);
-            textBox1.TabIndex = 6;
+            textBoxEmail.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBoxEmail.BackColor = Color.White;
+            textBoxEmail.BorderStyle = BorderStyle.None;
+            textBoxEmail.Font = new Font("Times New Roman", 13F);
+            textBoxEmail.ForeColor = Color.Black;
+            textBoxEmail.Location = new Point(16, 174);
+            textBoxEmail.Margin = new Padding(2);
+            textBoxEmail.Multiline = true;
+            textBoxEmail.Name = "textBoxEmail";
+            textBoxEmail.PlaceholderText = "Digite su correo";
+            textBoxEmail.Size = new Size(203, 26);
+            textBoxEmail.TabIndex = 6;
             // 
             // pictureBox6
             // 
@@ -394,60 +408,29 @@
             // panel7
             // 
             panel7.BackColor = Color.White;
-            panel7.Controls.Add(textBox3);
-            panel7.Controls.Add(pictureBox7);
-            panel7.Controls.Add(textBox2);
+            panel7.Controls.Add(textBoxSecondName);
             panel7.Controls.Add(pictureBox1);
             panel7.Controls.Add(label4);
-            panel7.Controls.Add(label8);
             panel7.Dock = DockStyle.Fill;
             panel7.Location = new Point(716, 5);
             panel7.Name = "panel7";
             panel7.Size = new Size(233, 227);
             panel7.TabIndex = 3;
             // 
-            // textBox3
+            // textBoxSecondName
             // 
-            textBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox3.BackColor = Color.White;
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Font = new Font("Times New Roman", 13F);
-            textBox3.ForeColor = Color.Black;
-            textBox3.Location = new Point(16, 174);
-            textBox3.Margin = new Padding(2);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.PasswordChar = '*';
-            textBox3.PlaceholderText = "Digite su contraseña";
-            textBox3.Size = new Size(205, 26);
-            textBox3.TabIndex = 8;
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(16, 197);
-            pictureBox7.Margin = new Padding(2);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(205, 12);
-            pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox7.TabIndex = 27;
-            pictureBox7.TabStop = false;
-            // 
-            // textBox2
-            // 
-            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox2.BackColor = Color.White;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Times New Roman", 13F);
-            textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(16, 54);
-            textBox2.Margin = new Padding(2);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Digite su apellido";
-            textBox2.Size = new Size(205, 26);
-            textBox2.TabIndex = 7;
+            textBoxSecondName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBoxSecondName.BackColor = Color.White;
+            textBoxSecondName.BorderStyle = BorderStyle.None;
+            textBoxSecondName.Font = new Font("Times New Roman", 13F);
+            textBoxSecondName.ForeColor = Color.Black;
+            textBoxSecondName.Location = new Point(16, 54);
+            textBoxSecondName.Margin = new Padding(2);
+            textBoxSecondName.Multiline = true;
+            textBoxSecondName.Name = "textBoxSecondName";
+            textBoxSecondName.PlaceholderText = "Digite su apellido";
+            textBoxSecondName.Size = new Size(205, 26);
+            textBoxSecondName.TabIndex = 7;
             // 
             // pictureBox1
             // 
@@ -473,18 +456,6 @@
             label4.Text = "Segundo Apellido:";
             label4.TextAlign = ContentAlignment.TopCenter;
             // 
-            // label8
-            // 
-            label8.Font = new Font("Times New Roman", 13F);
-            label8.ForeColor = Color.Black;
-            label8.Location = new Point(2, 142);
-            label8.Margin = new Padding(2, 0, 2, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(135, 30);
-            label8.TabIndex = 24;
-            label8.Text = "Contraseña:";
-            label8.TextAlign = ContentAlignment.TopCenter;
-            // 
             // tableLayoutPanel2
             // 
             tableLayoutPanel2.ColumnCount = 2;
@@ -505,34 +476,35 @@
             // panel3
             // 
             panel3.BackColor = Color.White;
-            panel3.Controls.Add(iconButton2);
+            panel3.Controls.Add(btnUpdate);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(3, 3);
             panel3.Name = "panel3";
             panel3.Size = new Size(471, 72);
             panel3.TabIndex = 0;
             // 
-            // iconButton2
+            // btnUpdate
             // 
-            iconButton2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            iconButton2.BackColor = Color.Yellow;
-            iconButton2.Cursor = Cursors.Hand;
-            iconButton2.FlatAppearance.BorderColor = Color.Yellow;
-            iconButton2.FlatAppearance.BorderSize = 2;
-            iconButton2.Font = new Font("Times New Roman", 12F);
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            iconButton2.IconColor = Color.FromArgb(11, 47, 75);
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.Location = new Point(155, 11);
-            iconButton2.Name = "iconButton2";
-            iconButton2.RightToLeft = RightToLeft.No;
-            iconButton2.Size = new Size(165, 50);
-            iconButton2.TabIndex = 23;
-            iconButton2.Text = "Actualizar";
-            iconButton2.TextAlign = ContentAlignment.MiddleRight;
-            iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton2.UseVisualStyleBackColor = false;
-            iconButton2.UseWaitCursor = true;
+            btnUpdate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnUpdate.BackColor = Color.Yellow;
+            btnUpdate.Cursor = Cursors.Hand;
+            btnUpdate.FlatAppearance.BorderColor = Color.Yellow;
+            btnUpdate.FlatAppearance.BorderSize = 2;
+            btnUpdate.Font = new Font("Times New Roman", 12F);
+            btnUpdate.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            btnUpdate.IconColor = Color.FromArgb(11, 47, 75);
+            btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnUpdate.Location = new Point(155, 11);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.RightToLeft = RightToLeft.No;
+            btnUpdate.Size = new Size(165, 50);
+            btnUpdate.TabIndex = 23;
+            btnUpdate.Text = "Actualizar";
+            btnUpdate.TextAlign = ContentAlignment.MiddleRight;
+            btnUpdate.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.UseWaitCursor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // panel4
             // 
@@ -679,8 +651,8 @@
             dataGridViewCellStyle2.BackColor = Color.FromArgb(26, 211, 238);
             dataGridViewCellStyle2.Font = new Font("Times New Roman", 12F);
             dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = Color.Transparent;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             tableUsers.DefaultCellStyle = dataGridViewCellStyle2;
             tableUsers.Dock = DockStyle.Fill;
@@ -805,7 +777,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tableLayoutPanel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
@@ -830,7 +801,6 @@
         private Label label3;
         private Label label5;
         private Label label4;
-        private Label label8;
         private Label label7;
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panel3;
@@ -839,22 +809,20 @@
         private Panel panel5;
         private Panel panel6;
         private Panel panel7;
-        private TextBox textBox1;
+        private TextBox textBoxEmail;
         private PictureBox pictureBox6;
         private Label label6;
         private Label label2;
-        private TextBox textBox3;
-        private PictureBox pictureBox7;
-        private TextBox textBox2;
+        private TextBox textBoxSecondName;
         private PictureBox pictureBox1;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox6;
+        private DateTimePicker dateTimePickerBirthDate;
+        private TextBox textBoxTelephone;
         private PictureBox pictureBox5;
-        private TextBox textBox5;
+        private TextBox textBoxIdentification;
         private PictureBox pictureBox4;
-        private TextBox textBox4;
+        private TextBox textBoxName;
         private PictureBox pictureBox3;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnUpdate;
         private FontAwesome.Sharp.IconButton iconButton3;
         private Panel panel8;
         private TableLayoutPanel tableLayoutPanel3;
@@ -873,5 +841,6 @@
         private DataGridViewTextBoxColumn ColumnsecondName;
         private DataGridViewTextBoxColumn ColumnTelephone;
         private DataGridViewTextBoxColumn ColumnEmail;
+        private TextBox textBoxId;
     }
 }

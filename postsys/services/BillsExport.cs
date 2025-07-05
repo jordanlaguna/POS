@@ -24,7 +24,7 @@ public class BillsExport
 
         foreach (var p in bills.Product)
         {
-            string linea = $" - {p.name} x {p.quantity} -> ₡{p.price:0.00} -> ₡{p.quantity * p.price:0.00}";
+            string linea = $" - {p.name} x {p.quantity} -> Precio U: ₡{p.price:0.00} -> Total: ₡{p.quantity * p.price:0.00}";
             doc.Add(new Paragraph(linea));
         }
 

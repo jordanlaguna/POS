@@ -65,7 +65,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(599, 187);
+            panel1.Size = new Size(584, 187);
             panel1.TabIndex = 1;
             // 
             // btnClose
@@ -77,7 +77,7 @@
             btnClose.IconColor = Color.White;
             btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnClose.IconSize = 30;
-            btnClose.Location = new Point(557, 3);
+            btnClose.Location = new Point(542, 3);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(39, 31);
             btnClose.TabIndex = 26;
@@ -137,7 +137,7 @@
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 68.5022049F));
-            tableLayoutPanel1.Size = new Size(599, 425);
+            tableLayoutPanel1.Size = new Size(584, 441);
             tableLayoutPanel1.TabIndex = 2;
             // 
             // panel2
@@ -154,7 +154,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(593, 419);
+            panel2.Size = new Size(578, 435);
             panel2.TabIndex = 0;
             // 
             // btnPay
@@ -167,10 +167,10 @@
             btnPay.IconChar = FontAwesome.Sharp.IconChar.Check;
             btnPay.IconColor = Color.FromArgb(11, 47, 75);
             btnPay.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnPay.Location = new Point(193, 216);
+            btnPay.Location = new Point(198, 252);
             btnPay.Name = "btnPay";
             btnPay.RightToLeft = RightToLeft.No;
-            btnPay.Size = new Size(204, 68);
+            btnPay.Size = new Size(224, 70);
             btnPay.TabIndex = 31;
             btnPay.Text = "Confirmar";
             btnPay.TextAlign = ContentAlignment.MiddleRight;
@@ -186,7 +186,7 @@
             label7.BackColor = Color.Transparent;
             label7.FlatStyle = FlatStyle.Flat;
             label7.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(227, 146);
+            label7.Location = new Point(227, 162);
             label7.Name = "label7";
             label7.Size = new Size(29, 33);
             label7.TabIndex = 26;
@@ -200,7 +200,7 @@
             label6.BackColor = Color.Transparent;
             label6.FlatStyle = FlatStyle.Flat;
             label6.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(106, 146);
+            label6.Location = new Point(106, 162);
             label6.Name = "label6";
             label6.Size = new Size(97, 33);
             label6.TabIndex = 30;
@@ -212,19 +212,19 @@
             cmbMethodPay.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             cmbMethodPay.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbMethodPay.FormattingEnabled = true;
-            cmbMethodPay.Location = new Point(313, 25);
+            cmbMethodPay.Location = new Point(313, 41);
             cmbMethodPay.Name = "cmbMethodPay";
-            cmbMethodPay.Size = new Size(192, 34);
+            cmbMethodPay.Size = new Size(177, 34);
             cmbMethodPay.TabIndex = 29;
             // 
             // textPay
             // 
             textPay.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textPay.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textPay.Location = new Point(227, 88);
+            textPay.Location = new Point(227, 104);
             textPay.Name = "textPay";
             textPay.PlaceholderText = "Ingrese el monto";
-            textPay.Size = new Size(263, 34);
+            textPay.Size = new Size(248, 34);
             textPay.TabIndex = 28;
             textPay.UseWaitCursor = true;
             // 
@@ -235,7 +235,7 @@
             label5.BackColor = Color.Transparent;
             label5.FlatStyle = FlatStyle.Flat;
             label5.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(106, 26);
+            label5.Location = new Point(106, 42);
             label5.Name = "label5";
             label5.Size = new Size(203, 33);
             label5.TabIndex = 27;
@@ -249,7 +249,7 @@
             label4.BackColor = Color.Transparent;
             label4.FlatStyle = FlatStyle.Flat;
             label4.Font = new Font("Times New Roman", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(106, 87);
+            label4.Location = new Point(106, 103);
             label4.Name = "label4";
             label4.Size = new Size(115, 33);
             label4.TabIndex = 26;
@@ -260,11 +260,12 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(599, 612);
+            ClientSize = new Size(584, 628);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Bills";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Bills";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

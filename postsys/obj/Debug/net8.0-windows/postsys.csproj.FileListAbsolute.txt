@@ -28,3 +28,4 @@ C:\Users\jorda\Documents\visual\postsys\postsys\obj\Debug\net8.0-windows\postsys
 C:\Users\jorda\Documents\visual\postsys\postsys\obj\Debug\net8.0-windows\postsys.sourcelink.json
 C:\Users\jorda\Documents\visual\postsys\postsys\bin\Debug\net8.0-windows\BouncyCastle.Crypto.dll
 C:\Users\jorda\Documents\visual\postsys\postsys\bin\Debug\net8.0-windows\itextsharp.dll
+C:\Users\jorda\Documents\visual\postsys\postsys\obj\Debug\net8.0-windows\postsys.Forms.Invoice.resources
